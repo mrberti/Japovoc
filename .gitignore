@@ -1,4 +1,6 @@
+Japovoc
 debug/
 release/
 *.o
 *.exe
+moc_japovoc*
