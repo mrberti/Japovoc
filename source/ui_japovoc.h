@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'japovoc.ui'
 **
-** Created: Tue 25. May 17:33:19 2010
+** Created: Tue 25. May 18:19:20 2010
 **      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -27,7 +27,7 @@ public:
     {
         if (Japovoc->objectName().isEmpty())
             Japovoc->setObjectName(QString::fromUtf8("Japovoc"));
-        Japovoc->resize(610, 413);
+        Japovoc->resize(585, 399);
 
         retranslateUi(Japovoc);
 
