@@ -1,6 +1,11 @@
+# linux binary
 Japovoc
-debug/
-release/
+# windows folders
+debug/	 
+release/	
 *.o
 *.exe
+# Qt compiler generated
 moc_japovoc*
+*.user
+Makefile*
