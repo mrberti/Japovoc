@@ -11,8 +11,10 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        japovoc.cpp
+		japovoc.cpp
 
 HEADERS  += japovoc.h
 
 FORMS    += japovoc.ui
+
+!win32:DESTDIR	= ../
