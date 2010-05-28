@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--You can collect some statistics about each vocable whith this xml file-->
+<japovoc content="statistics" version="1.0">
+	<vocable id="1"><!--The corresponding ID to the vocable-->
+		<tried>2</tried><!--Times tried to guess this word-->
+		<succeded>1</succeded><!--Times succeded guessing this word-->
+		<failed>1</failed><!--Tmes failed guessing this word-->
+		<box>1</box><!--The vocables can advance in boxes where 1 is the start box-->
+		<cat>verb</cat><!--Category of the word. Can have multiple ones. Users can define their own.-->
+		<cat>transitive</cat>
+	</vocable>
+</japovoc>

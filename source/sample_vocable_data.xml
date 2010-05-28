@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--This file contains all vocables. It will be possible to store translations in different languages-->
+<japovoc content="vocables" version="1.0">
+	<vocable id="1" lesson="1"><!--creates new vocable. íd must be unic. lesson can be optional-->
+		<origin lang="japanese"><!--the word in the origal language-->
+			<reading yomi="on"　primary="true">ハン</reading><!--not shure if this makes sense. Only one reading should be primary-->
+			<reading yomi="kun">なか<okurigana>ば</okurigana>	</reading>
+			<kanji>半</kanji>
+		</origin>
+		<translation lang="german"><!--One translation. lang indicates the language to which is to translate-->
+			<meaning primary="true">halb</meaning><!--Can have multiple meanings but only one primary-->
+		</translation>
+		<translation lang="english">
+			<meaning primary="true">half</meaning>
+		</translation>
+	</vocable>
+	<vocable id="2" lesson="1">
+		<origin lang="japanese">
+			<reading>bla</reading>
+		</origin>
+		<translation lang="german">
+			<meaning>blub</meaning>
+		</translation>
+	</vocable>
+</japovoc>
