@@ -41,10 +41,10 @@ private:
 	QGraphicsScene scene;
 	QRect	sceneRect;
 
-	QList<Vocable::reading_t> readings;
-	QList<Vocable::translation_t> translations;
 	QFont fontOrigin;
 	QFont fontTranslation;
+
+
 };
 
 #endif // JAPOVOC_H

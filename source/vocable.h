@@ -2,6 +2,7 @@
 #define VOCABLE_H
 
 #include <QtGui>
+//#include <QPainter>
 #include <QGraphicsItem>
 
 class Vocable : public QGraphicsItem
@@ -26,7 +27,8 @@ public:
 
 	/// Constructor
 	Vocable();
-	Vocable(quint32 id, quint16 lesson, QString langOrigin, QList<reading_t> readings, QList<translation_t> translations, QFont fontOrigin, QFont fontTranslation);
+	Vocable(quint32 id, quint16 lesson, QString langOrigin, QList<reading_t> readings, QList<translation_t> translations, QFont *fontOrigin, QFont *fontTranslation);
+	~Vocable();
 
 	/// Overrides the virtual function boundingRect() of QGraphicsItem
 	virtual QRectF boundingRect() const { return bounds; }
@@ -38,14 +40,15 @@ private:
 	/// Holds the value for the bounding box
 	QRectF bounds;
 
+	static quint32	maxID;
 	quint32		id;
 	quint16		lesson;
 	QString		langOrigin;
 	QList<reading_t>		readings;
 	QList<translation_t>	translations;
 
-	QFont fontOrigin;
-	QFont fontTranslation;
+	QFont *fontOrigin;
+	QFont *fontTranslation;
 };
 
 #endif // VOCABLE_H

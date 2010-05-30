@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'japovoc.ui'
 **
-** Created: Sun 30. May 20:01:26 2010
+** Created: Sun 30. May 21:19:31 2010
 **      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -42,9 +42,9 @@ public:
     QVBoxLayout *verticalLayout_2;
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout;
-    QLabel *label;
+    QLabel *lbTitle;
     QSpacerItem *horizontalSpacer;
-    QLabel *label_2;
+    QLabel *lbJapaneseTitle;
     QGraphicsView *graphicsView;
     QLineEdit *leInput;
     QPushButton *btMagicButton;
@@ -79,26 +79,26 @@ public:
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setSpacing(6);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        label = new QLabel(centralWidget);
-        label->setObjectName(QString::fromUtf8("label"));
+        lbTitle = new QLabel(centralWidget);
+        lbTitle->setObjectName(QString::fromUtf8("lbTitle"));
         QFont font;
         font.setPointSize(20);
-        label->setFont(font);
+        lbTitle->setFont(font);
 
-        horizontalLayout->addWidget(label);
+        horizontalLayout->addWidget(lbTitle);
 
         horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout->addItem(horizontalSpacer);
 
-        label_2 = new QLabel(centralWidget);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
+        lbJapaneseTitle = new QLabel(centralWidget);
+        lbJapaneseTitle->setObjectName(QString::fromUtf8("lbJapaneseTitle"));
         QFont font1;
         font1.setFamily(QString::fromUtf8("MS Mincho"));
         font1.setPointSize(20);
-        label_2->setFont(font1);
+        lbJapaneseTitle->setFont(font1);
 
-        horizontalLayout->addWidget(label_2);
+        horizontalLayout->addWidget(lbJapaneseTitle);
 
 
         verticalLayout->addLayout(horizontalLayout);
@@ -170,8 +170,8 @@ public:
         actionQuit->setText(QApplication::translate("Japovoc", "Quit", 0, QApplication::UnicodeUTF8));
         actionPreferences->setText(QApplication::translate("Japovoc", "Preferences...", 0, QApplication::UnicodeUTF8));
         actionAbout->setText(QApplication::translate("Japovoc", "About...", 0, QApplication::UnicodeUTF8));
-        label->setText(QApplication::translate("Japovoc", "Japovoc", 0, QApplication::UnicodeUTF8));
-        label_2->setText(QApplication::translate("Japovoc", "\346\227\245\346\234\254\350\252\236", 0, QApplication::UnicodeUTF8));
+        lbTitle->setText(QApplication::translate("Japovoc", "Japovoc", 0, QApplication::UnicodeUTF8));
+        lbJapaneseTitle->setText(QApplication::translate("Japovoc", "\343\202\270\343\203\243\343\203\235\343\203\264\343\202\251\343\202\257", 0, QApplication::UnicodeUTF8));
         leInput->setText(QApplication::translate("Japovoc", "\343\201\202\343\201\204\343\201\212\343\201\206\343\201\210\343\201\212", 0, QApplication::UnicodeUTF8));
         btMagicButton->setText(QApplication::translate("Japovoc", "Magic Button", 0, QApplication::UnicodeUTF8));
         progressBar->setFormat(QApplication::translate("Japovoc", "%v/%m", 0, QApplication::UnicodeUTF8));
