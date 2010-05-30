@@ -1,8 +1,8 @@
 # linux binary
 Japovoc
 # windows folders
-debug/	 
-release/	
+source/debug/	 
+source/release/	
 *.o
 *.exe
 # Qt compiler generated

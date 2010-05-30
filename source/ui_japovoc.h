@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'japovoc.ui'
 **
-** Created: Sun 30. May 18:33:33 2010
+** Created: Sun 30. May 18:49:50 2010
 **      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -34,6 +34,8 @@ class Ui_Japovoc
 {
 public:
     QAction *actionQuit;
+    QAction *actionPreferences;
+    QAction *actionAbout;
     QWidget *centralWidget;
     QVBoxLayout *verticalLayout_2;
     QVBoxLayout *verticalLayout;
@@ -43,9 +45,10 @@ public:
     QLabel *label_2;
     QGraphicsView *graphicsView;
     QProgressBar *progressBar;
-    QLabel *label_3;
     QMenuBar *menuBar;
     QMenu *menuFile;
+    QMenu *menuEdit;
+    QMenu *menu;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
 
@@ -56,6 +59,10 @@ public:
         Japovoc->resize(593, 405);
         actionQuit = new QAction(Japovoc);
         actionQuit->setObjectName(QString::fromUtf8("actionQuit"));
+        actionPreferences = new QAction(Japovoc);
+        actionPreferences->setObjectName(QString::fromUtf8("actionPreferences"));
+        actionAbout = new QAction(Japovoc);
+        actionAbout->setObjectName(QString::fromUtf8("actionAbout"));
         centralWidget = new QWidget(Japovoc);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         verticalLayout_2 = new QVBoxLayout(centralWidget);
@@ -106,16 +113,6 @@ public:
 
         verticalLayout->addWidget(progressBar);
 
-        label_3 = new QLabel(centralWidget);
-        label_3->setObjectName(QString::fromUtf8("label_3"));
-        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
-        sizePolicy.setHorizontalStretch(0);
-        sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(label_3->sizePolicy().hasHeightForWidth());
-        label_3->setSizePolicy(sizePolicy);
-
-        verticalLayout->addWidget(label_3);
-
 
         verticalLayout_2->addLayout(verticalLayout);
 
@@ -125,6 +122,10 @@ public:
         menuBar->setGeometry(QRect(0, 0, 593, 21));
         menuFile = new QMenu(menuBar);
         menuFile->setObjectName(QString::fromUtf8("menuFile"));
+        menuEdit = new QMenu(menuBar);
+        menuEdit->setObjectName(QString::fromUtf8("menuEdit"));
+        menu = new QMenu(menuBar);
+        menu->setObjectName(QString::fromUtf8("menu"));
         Japovoc->setMenuBar(menuBar);
         mainToolBar = new QToolBar(Japovoc);
         mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
@@ -134,8 +135,12 @@ public:
         Japovoc->setStatusBar(statusBar);
 
         menuBar->addAction(menuFile->menuAction());
+        menuBar->addAction(menuEdit->menuAction());
+        menuBar->addAction(menu->menuAction());
         menuFile->addSeparator();
         menuFile->addAction(actionQuit);
+        menuEdit->addAction(actionPreferences);
+        menu->addAction(actionAbout);
 
         retranslateUi(Japovoc);
         QObject::connect(actionQuit, SIGNAL(activated()), Japovoc, SLOT(close()));
@@ -147,16 +152,14 @@ public:
     {
         Japovoc->setWindowTitle(QApplication::translate("Japovoc", "Japovoc", 0, QApplication::UnicodeUTF8));
         actionQuit->setText(QApplication::translate("Japovoc", "Quit", 0, QApplication::UnicodeUTF8));
+        actionPreferences->setText(QApplication::translate("Japovoc", "Preferences...", 0, QApplication::UnicodeUTF8));
+        actionAbout->setText(QApplication::translate("Japovoc", "About...", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("Japovoc", "Japovoc", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("Japovoc", "\346\227\245\346\234\254\350\252\236", 0, QApplication::UnicodeUTF8));
         progressBar->setFormat(QApplication::translate("Japovoc", "%v/%m", 0, QApplication::UnicodeUTF8));
-        label_3->setText(QApplication::translate("Japovoc", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">This program is a stub. Please checkout later.</span></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">Author: Simon Bertling &lt;berti.x@gmx.de&gt;</span></p></body></html>", 0, QApplication::UnicodeUTF8));
         menuFile->setTitle(QApplication::translate("Japovoc", "File", 0, QApplication::UnicodeUTF8));
+        menuEdit->setTitle(QApplication::translate("Japovoc", "Edit", 0, QApplication::UnicodeUTF8));
+        menu->setTitle(QApplication::translate("Japovoc", "?", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

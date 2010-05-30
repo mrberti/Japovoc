@@ -3,21 +3,26 @@
 
 #include <QMainWindow>
 
+#include "aboutdialog.h"
+
 namespace Ui {
-    class Japovoc;
+	class Japovoc;
 }
 
 class Japovoc : public QMainWindow {
-    Q_OBJECT
+	Q_OBJECT
 public:
-    Japovoc(QWidget *parent = 0);
-    ~Japovoc();
+	Japovoc(QWidget *parent = 0);
+	~Japovoc();
+
+public slots:
+	void showAboutBox();
 
 protected:
-    void changeEvent(QEvent *e);
+	void changeEvent(QEvent *e);
 
 private:
-    Ui::Japovoc *ui;
+	Ui::Japovoc *ui;
 };
 
 #endif // JAPOVOC_H
