@@ -3,21 +3,23 @@
 
 #include <QDialog>
 
+#include "japovoc.h"
+
 namespace Ui {
-    class AboutDialog;
+	class AboutDialog;
 }
 
 class AboutDialog : public QDialog {
-    Q_OBJECT
+	Q_OBJECT
 public:
-    AboutDialog(QWidget *parent = 0);
-    ~AboutDialog();
+	AboutDialog(QWidget *parent = 0);
+	~AboutDialog();
 
 protected:
-    void changeEvent(QEvent *e);
+	void changeEvent(QEvent *e);
 
 private:
-    Ui::AboutDialog *ui;
+	Ui::AboutDialog *ui;
 };
 
 #endif // ABOUTDIALOG_H

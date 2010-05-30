@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'japovoc.ui'
 **
-** Created: Sun 30. May 18:49:50 2010
+** Created: Sun 30. May 20:01:26 2010
 **      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -18,10 +18,12 @@
 #include <QtGui/QHBoxLayout>
 #include <QtGui/QHeaderView>
 #include <QtGui/QLabel>
+#include <QtGui/QLineEdit>
 #include <QtGui/QMainWindow>
 #include <QtGui/QMenu>
 #include <QtGui/QMenuBar>
 #include <QtGui/QProgressBar>
+#include <QtGui/QPushButton>
 #include <QtGui/QSpacerItem>
 #include <QtGui/QStatusBar>
 #include <QtGui/QToolBar>
@@ -44,6 +46,8 @@ public:
     QSpacerItem *horizontalSpacer;
     QLabel *label_2;
     QGraphicsView *graphicsView;
+    QLineEdit *leInput;
+    QPushButton *btMagicButton;
     QProgressBar *progressBar;
     QMenuBar *menuBar;
     QMenu *menuFile;
@@ -101,8 +105,20 @@ public:
 
         graphicsView = new QGraphicsView(centralWidget);
         graphicsView->setObjectName(QString::fromUtf8("graphicsView"));
+        graphicsView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        graphicsView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
         verticalLayout->addWidget(graphicsView);
+
+        leInput = new QLineEdit(centralWidget);
+        leInput->setObjectName(QString::fromUtf8("leInput"));
+
+        verticalLayout->addWidget(leInput);
+
+        btMagicButton = new QPushButton(centralWidget);
+        btMagicButton->setObjectName(QString::fromUtf8("btMagicButton"));
+
+        verticalLayout->addWidget(btMagicButton);
 
         progressBar = new QProgressBar(centralWidget);
         progressBar->setObjectName(QString::fromUtf8("progressBar"));
@@ -156,6 +172,8 @@ public:
         actionAbout->setText(QApplication::translate("Japovoc", "About...", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("Japovoc", "Japovoc", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("Japovoc", "\346\227\245\346\234\254\350\252\236", 0, QApplication::UnicodeUTF8));
+        leInput->setText(QApplication::translate("Japovoc", "\343\201\202\343\201\204\343\201\212\343\201\206\343\201\210\343\201\212", 0, QApplication::UnicodeUTF8));
+        btMagicButton->setText(QApplication::translate("Japovoc", "Magic Button", 0, QApplication::UnicodeUTF8));
         progressBar->setFormat(QApplication::translate("Japovoc", "%v/%m", 0, QApplication::UnicodeUTF8));
         menuFile->setTitle(QApplication::translate("Japovoc", "File", 0, QApplication::UnicodeUTF8));
         menuEdit->setTitle(QApplication::translate("Japovoc", "Edit", 0, QApplication::UnicodeUTF8));

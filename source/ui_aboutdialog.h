@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'aboutdialog.ui'
 **
-** Created: Sun 30. May 18:44:18 2010
+** Created: Sun 30. May 20:18:45 2010
 **      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -29,14 +29,14 @@ public:
     QVBoxLayout *verticalLayout_2;
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout;
-    QLabel *label;
+    QLabel *lbTitle;
     QSpacerItem *horizontalSpacer;
-    QLabel *label_5;
+    QLabel *lbJapaneseTitle;
     QSpacerItem *verticalSpacer;
-    QLabel *label_2;
-    QLabel *label_3;
-    QLabel *label_4;
-    QLabel *label_6;
+    QLabel *lbVersion;
+    QLabel *lbAuthor;
+    QLabel *lbEmail;
+    QLabel *lbWeb;
 
     void setupUi(QDialog *AboutDialog)
     {
@@ -49,26 +49,26 @@ public:
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        label = new QLabel(AboutDialog);
-        label->setObjectName(QString::fromUtf8("label"));
+        lbTitle = new QLabel(AboutDialog);
+        lbTitle->setObjectName(QString::fromUtf8("lbTitle"));
         QFont font;
         font.setPointSize(14);
-        label->setFont(font);
+        lbTitle->setFont(font);
 
-        horizontalLayout->addWidget(label);
+        horizontalLayout->addWidget(lbTitle);
 
         horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout->addItem(horizontalSpacer);
 
-        label_5 = new QLabel(AboutDialog);
-        label_5->setObjectName(QString::fromUtf8("label_5"));
+        lbJapaneseTitle = new QLabel(AboutDialog);
+        lbJapaneseTitle->setObjectName(QString::fromUtf8("lbJapaneseTitle"));
         QFont font1;
         font1.setFamily(QString::fromUtf8("MS Mincho"));
         font1.setPointSize(16);
-        label_5->setFont(font1);
+        lbJapaneseTitle->setFont(font1);
 
-        horizontalLayout->addWidget(label_5);
+        horizontalLayout->addWidget(lbJapaneseTitle);
 
 
         verticalLayout->addLayout(horizontalLayout);
@@ -77,25 +77,25 @@ public:
 
         verticalLayout->addItem(verticalSpacer);
 
-        label_2 = new QLabel(AboutDialog);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
+        lbVersion = new QLabel(AboutDialog);
+        lbVersion->setObjectName(QString::fromUtf8("lbVersion"));
 
-        verticalLayout->addWidget(label_2);
+        verticalLayout->addWidget(lbVersion);
 
-        label_3 = new QLabel(AboutDialog);
-        label_3->setObjectName(QString::fromUtf8("label_3"));
+        lbAuthor = new QLabel(AboutDialog);
+        lbAuthor->setObjectName(QString::fromUtf8("lbAuthor"));
 
-        verticalLayout->addWidget(label_3);
+        verticalLayout->addWidget(lbAuthor);
 
-        label_4 = new QLabel(AboutDialog);
-        label_4->setObjectName(QString::fromUtf8("label_4"));
+        lbEmail = new QLabel(AboutDialog);
+        lbEmail->setObjectName(QString::fromUtf8("lbEmail"));
 
-        verticalLayout->addWidget(label_4);
+        verticalLayout->addWidget(lbEmail);
 
-        label_6 = new QLabel(AboutDialog);
-        label_6->setObjectName(QString::fromUtf8("label_6"));
+        lbWeb = new QLabel(AboutDialog);
+        lbWeb->setObjectName(QString::fromUtf8("lbWeb"));
 
-        verticalLayout->addWidget(label_6);
+        verticalLayout->addWidget(lbWeb);
 
 
         verticalLayout_2->addLayout(verticalLayout);
@@ -109,16 +109,16 @@ public:
     void retranslateUi(QDialog *AboutDialog)
     {
         AboutDialog->setWindowTitle(QApplication::translate("AboutDialog", "Dialog", 0, QApplication::UnicodeUTF8));
-        label->setText(QApplication::translate("AboutDialog", "Japovoc", 0, QApplication::UnicodeUTF8));
-        label_5->setText(QApplication::translate("AboutDialog", "\346\227\245\346\234\254\350\252\236", 0, QApplication::UnicodeUTF8));
-        label_2->setText(QApplication::translate("AboutDialog", "Version 1.0", 0, QApplication::UnicodeUTF8));
-        label_3->setText(QApplication::translate("AboutDialog", "Author: Simon Bertling", 0, QApplication::UnicodeUTF8));
-        label_4->setText(QApplication::translate("AboutDialog", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        lbTitle->setText(QApplication::translate("AboutDialog", "Japovoc", 0, QApplication::UnicodeUTF8));
+        lbJapaneseTitle->setText(QApplication::translate("AboutDialog", "\346\227\245\346\234\254\350\252\236", 0, QApplication::UnicodeUTF8));
+        lbVersion->setText(QApplication::translate("AboutDialog", "Version 1.0", 0, QApplication::UnicodeUTF8));
+        lbAuthor->setText(QApplication::translate("AboutDialog", "Author: Simon Bertling", 0, QApplication::UnicodeUTF8));
+        lbEmail->setText(QApplication::translate("AboutDialog", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">Email: berti.x@gmx.de</span></p></body></html>", 0, QApplication::UnicodeUTF8));
-        label_6->setText(QApplication::translate("AboutDialog", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        lbWeb->setText(QApplication::translate("AboutDialog", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"

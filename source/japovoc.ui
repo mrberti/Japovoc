@@ -60,7 +60,28 @@
        </layout>
       </item>
       <item>
-       <widget class="QGraphicsView" name="graphicsView"/>
+       <widget class="QGraphicsView" name="graphicsView">
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="leInput">
+        <property name="text">
+         <string>あいおうえお</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btMagicButton">
+        <property name="text">
+         <string>Magic Button</string>
+        </property>
+       </widget>
       </item>
       <item>
        <widget class="QProgressBar" name="progressBar">
