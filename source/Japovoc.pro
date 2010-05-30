@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2010-05-25T17:17:02
+# Project created by QtCreator 2010-05-30T18:11:58
 #
 #-------------------------------------------------
 
@@ -11,10 +11,8 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-		japovoc.cpp
+        japovoc.cpp
 
 HEADERS  += japovoc.h
 
 FORMS    += japovoc.ui
-
-!win32:DESTDIR	= ../

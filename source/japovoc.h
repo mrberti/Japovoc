@@ -1,13 +1,13 @@
 #ifndef JAPOVOC_H
 #define JAPOVOC_H
 
-#include <QWidget>
+#include <QMainWindow>
 
 namespace Ui {
     class Japovoc;
 }
 
-class Japovoc : public QWidget {
+class Japovoc : public QMainWindow {
     Q_OBJECT
 public:
     Japovoc(QWidget *parent = 0);
