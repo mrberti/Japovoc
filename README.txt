@@ -1,5 +1,5 @@
 # JAPOVOC README
-# author: Simon Bertling, <berti.x@gmx.de>
+# Author: Simon Bertling, <berti.x@gmx.de>
 # 05-25-2010
 
 This tiny programm wants to become a japanese vocab trainer. It is written in c++ with Qt.
