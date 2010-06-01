@@ -30,6 +30,14 @@ public:
 	Vocable(quint32 id, quint16 lesson, QString langOrigin, QList<reading_t> readings, QList<translation_t> translations, QFont *fontOrigin, QFont *fontTranslation);
 	~Vocable();
 
+	QFont *setFontOrigin(QFont *font) { fontOrigin = font; return fontOrigin; }
+	QFont *getFontOrigin() { return fontOrigin; }
+
+	QFont *setFontTranslation(QFont *font) { fontTranslation = font; return fontTranslation; }
+	QFont *getFontTranslation() { return fontTranslation; }
+
+	QRectF setBounds(QRectF bounds);
+
 	/// Overrides the virtual function boundingRect() of QGraphicsItem
 	virtual QRectF boundingRect() const { return bounds; }
 
@@ -38,12 +46,6 @@ public:
 
 	/// Returns a string containing some data about the vocable
 	QString print();
-
-	QFont *setFontOrigin(QFont *font) { fontOrigin = font; return fontOrigin; }
-	QFont *getFontOrigin() { return fontOrigin; }
-
-	QFont *setFontTranslation(QFont *font) { fontTranslation = font; return fontTranslation; }
-	QFont *getFontTranslation() { return fontTranslation; }
 
 private:
 	/// Holds the value for the bounding box

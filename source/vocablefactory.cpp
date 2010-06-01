@@ -195,5 +195,19 @@ quint32 VocableFactory::addAllToScene()
 		scene->addItem(vocable);
 		numAdded++;
 	}
+	scene->update();
 	return numAdded;
+}
+
+void VocableFactory::setVisible(quint32 id)
+{
+	if(vocables.contains(id))
+		vocables.value(id)->setVisible(true);
+}
+
+void VocableFactory::setAllBounds(QRectF rect)
+{
+	Vocable *vocable;
+	foreach(vocable, vocables)
+		vocable->setBounds(rect);
 }

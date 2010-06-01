@@ -8,6 +8,7 @@ Vocable::Vocable()
 	lesson = 0;
 	fontOrigin = 0;
 	fontTranslation = 0;
+	setVisible(false);
 }
 
 Vocable::Vocable(quint32 id, quint16 lesson, QString langOrigin, QList<reading_t> readings, QList<translation_t> translations, QFont *fontOrigin, QFont *fontTranslation)
@@ -17,6 +18,7 @@ Vocable::Vocable(quint32 id, quint16 lesson, QString langOrigin, QList<reading_t
 	if(id > maxID)
 		maxID = id;
 	maxID++;
+	setVisible(false);
 }
 
 Vocable::~Vocable()
@@ -28,9 +30,10 @@ void Vocable::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, Q
 {
 	Q_UNUSED(option);
 	Q_UNUSED(widget);
+	painter->drawRect(bounds);
 	//QString blub("deine mudda");
-	painter->setFont(*fontOrigin);
-	painter->drawText(0,20,this->print());
+	//painter->setFont(*fontOrigin);
+	//painter->drawText(0,20,this->print());
 	//painter->drawText(0,50,readings.first().reading);
 	qDebug("blubbi");
 }
@@ -45,3 +48,14 @@ QString Vocable::print()
 	str += ", translatioinsfirst = " + this->translations.first().meaning;
 	return str;
 }
+
+QRectF Vocable::setBounds(QRectF bounds)
+{
+	   bounds.setX(bounds.x() + 10);
+	   bounds.setY(bounds.y() + 10);
+	   bounds.setWidth(bounds.width() - 10);
+	   bounds.setHeight(bounds.height() - 10);
+	   this->bounds = bounds;
+	   return this->bounds;
+}
+

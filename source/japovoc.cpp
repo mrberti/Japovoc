@@ -49,19 +49,18 @@ void Japovoc::doMagic()
 	sceneRect.setRect(0,0,ui->graphicsView->width(),ui->graphicsView->height());
 	scene.setSceneRect(sceneRect);
 
+	QString errorString = vocableFactory.readFromXML("../sample_vocable_data.xml");
+	if(!errorString.isEmpty())
+		QMessageBox::critical(this, tr("Error"), errorString);
 	vocableFactory.setScene(&scene);
 
 	vocableFactory.setFontOrigin(ui->lbJapaneseTitle->font());
 	vocableFactory.setFontTranslation(ui->lbTitle->font());
 
-	vocableFactory.addAllToScene();
+	vocableFactory.setVisible(1);
+	vocableFactory.setAllBounds(sceneRect);
 
-	qDebug("Vocables cleared = %d", vocableFactory.clearVocables());
-
-	QString errorString = vocableFactory.readFromXML("../sample_vocable_data.xml");
-	if(!errorString.isEmpty())
-		QMessageBox::critical(this, tr("Error"), errorString);
-
+	qDebug("numAdded = %d",vocableFactory.addAllToScene());
 	scene.update();
 	qDebug("Kazam... did magic!");
 }

@@ -20,11 +20,15 @@ public:
 
 	void setScene(QGraphicsScene *scene) { this->scene = scene; }
 
+	void setAllBounds(QRectF rect);
+
 	/// Reads from the vocable data from an XML file an creates the vocables. Returns an error string on parsing errors
 	QString readFromXML(QString path);
 
 	/// Adds all vocables to the Graphicsscene. Returns how many vocables were added
 	quint32 addAllToScene();
+
+	void setVisible(quint32 id);
 
 	/// Deletes all vocables, if existing. Returns how many vocables were deleted
 	quint32 clearVocables();
