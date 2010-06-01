@@ -2,13 +2,16 @@
 
 VocableFactory::VocableFactory()
 {
+	clearVocables();
 	fontOrigin = 0;
 	fontTranslation = 0;
 }
 
 VocableFactory::VocableFactory(QFont *fontOrigin, QFont *fontTranslation)
 	: fontOrigin(fontOrigin), fontTranslation(fontTranslation)
-{}
+{
+	qDebug("Vocables cleared = %d", clearVocables());
+}
 
 QFont *VocableFactory::setFontOrigin(QFont *font)
 {
@@ -175,3 +178,19 @@ QXmlStreamReader::Error VocableFactory::parseVocable(QXmlStreamReader *xml)
 	return QXmlStreamReader::NoError;
 }
 
+quint32 VocableFactory::clearVocables()
+{
+	quint32 numDeleted = 0;
+	quint32 size = vocables.size();
+	Vocable *vocable;
+	if(size > 0) {
+		foreach(vocable, vocables)
+		{
+			if(vocable) {
+				numDeleted++;
+				delete vocable;
+			}
+		}
+	}
+	return numDeleted;
+}

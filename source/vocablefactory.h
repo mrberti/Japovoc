@@ -12,14 +12,17 @@ public:
 	VocableFactory();
 	VocableFactory(QFont *fontOrigin, QFont *fontTranslation);
 
-	/// Reads from the vocable data from an XML file an creates the vocables. Returns an error string on parsing errors
-	QString readFromXML(QString path);
-
 	QFont *setFontOrigin(QFont *font);
 	QFont *getFontOrigin() { return fontOrigin; }
 
 	QFont *setFontTranslation(QFont *font);
 	QFont *getFontTranslation() { return fontTranslation; }
+
+	/// Reads from the vocable data from an XML file an creates the vocables. Returns an error string on parsing errors
+	QString readFromXML(QString path);
+
+	/// Deletes all vocables, if existing. Returns how many vocables were deleted
+	quint32 clearVocables();
 
 private:
 	/// Parses one Vocable
