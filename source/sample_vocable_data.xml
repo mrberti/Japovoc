@@ -10,6 +10,7 @@
 		</origin>
 		<translation lang="german"><!--One translation. lang indicates the language to which is to translate-->
 			<meaning primary="true">halb</meaning><!--Can have multiple meanings but only one primary-->
+			<meaning>Hälfte</meaning>
 		</translation>
 		<translation lang="english">
 			<meaning primary="true">half</meaning>
@@ -17,14 +18,6 @@
 	</vocable>
 	<vocable id="2" lesson="1">
 		<origin lang="japanese">
-			<reading>bla</reading>
-		</origin>
-		<translation lang="german">
-			<meaning>blub</meaning>
-		</translation>
-	</vocable>
-	<vocable id="3" lesson="2">
-		<origin lang="furzhauserisch">
 			<reading>bla</reading>
 		</origin>
 		<translation lang="german">

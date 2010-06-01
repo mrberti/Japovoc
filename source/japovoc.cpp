@@ -51,16 +51,9 @@ void Japovoc::doMagic()
 
 	VocableFactory vocFac;
 
-	QXmlStreamReader::Error xmlError;
-
-	xmlError = vocFac.readFromXML("../sample_vocable_data.xml");
-	switch(xmlError) {
-		case QXmlStreamReader::NoError:
-			qDebug("No error occured");
-			break;
-		default:
-			qDebug("An error occured");
-	}
+	QString errorString = vocFac.readFromXML("../sample_vocable_data.xml");
+	if(!errorString.isEmpty())
+		QMessageBox::critical(this, tr("Error"), errorString);
 
 	scene.update();
 	qDebug("Kazam... did magic!");

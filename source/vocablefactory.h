@@ -11,8 +11,8 @@ class VocableFactory
 public:
 	VocableFactory();
 
-	/// Reads from the vocable data from an XML file an creates the vocables
-	QXmlStreamReader::Error readFromXML(QString path);
+	/// Reads from the vocable data from an XML file an creates the vocables. Returns an error string on parsing errors
+	QString readFromXML(QString path);
 
 private:
 	/// Parses one Vocable

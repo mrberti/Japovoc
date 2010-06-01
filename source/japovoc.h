@@ -2,6 +2,7 @@
 #define JAPOVOC_H
 
 #include <QMainWindow>
+#include <QMessageBox>
 
 #include "aboutdialog.h"
 
