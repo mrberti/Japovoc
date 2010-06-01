@@ -49,25 +49,20 @@ void Japovoc::doMagic()
 	sceneRect.setRect(0,0,ui->graphicsView->width(),ui->graphicsView->height());
 	scene.setSceneRect(sceneRect);
 
-	Vocable::reading_t reading;
-	QList<Vocable::reading_t> readings;
-	QList<Vocable::translation_t> translations;
+	VocableFactory vocFac;
 
-	Vocable::translation_t translation;
-	translation.language = "German";
-	translation.meaning = "Deine Mudda";
-	translation.primary = true;
+	QXmlStreamReader::Error xmlError;
 
-	reading.kanji = ui->leInput->text().at(0);
-	reading.yomi = ui->leInput->text().at(1);
-	reading.reading = ui->leInput->text();
-
-	readings.push_back(reading);
-	translations.push_back(translation);
-	QString str("Japanese");
-	voc = new Vocable(1,1,str, readings, translations, &fontOrigin, &fontTranslation);
-	scene.addItem(voc);
+	xmlError = vocFac.readFromXML("../sample_vocable_data.xml");
+	switch(xmlError) {
+		case QXmlStreamReader::NoError:
+			qDebug("No error occured");
+			break;
+		default:
+			qDebug("An error occured");
+	}
 
 	scene.update();
 	qDebug("Kazam... did magic!");
+	this->close();
 }

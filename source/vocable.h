@@ -36,6 +36,9 @@ public:
 	/// Overrides the virtual function paint() of QGraphicsItem
 	virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
 
+	/// Returns a string containing some data about the vocable
+	QString print();
+
 private:
 	/// Holds the value for the bounding box
 	QRectF bounds;
