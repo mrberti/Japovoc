@@ -1,0 +1,7 @@
+# Just some thoughts for me
+
+* improve readFromXML()
+	- every reading needs its own kanji
+	
+* improve font handling
+	- implement fonts for kanji, okurigana, primary etc...
