@@ -15,15 +15,16 @@ QFont *VocableFactory::setFontOrigin(QFont *font)
 	fontOrigin = font;
 	Vocable *vocable;
 	foreach(vocable, vocables)
-	{
-
-	}
+		vocable->setFontOrigin(fontOrigin);
 	return fontOrigin;
 }
 
 QFont *VocableFactory::setFontTranslation(QFont *font)
 {
 	fontTranslation = font;
+	Vocable *vocable;
+	foreach(vocable, vocables)
+		vocable->setFontTranslation(fontTranslation);
 	return fontTranslation;
 }
 
