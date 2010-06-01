@@ -3,31 +3,23 @@
 VocableFactory::VocableFactory()
 {
 	clearVocables();
-	fontOrigin = 0;
-	fontTranslation = 0;
 }
 
-VocableFactory::VocableFactory(QFont *fontOrigin, QFont *fontTranslation)
+VocableFactory::VocableFactory(QFont fontOrigin, QFont fontTranslation)
 	: fontOrigin(fontOrigin), fontTranslation(fontTranslation)
 {
 	qDebug("Vocables cleared = %d", clearVocables());
 }
 
-QFont *VocableFactory::setFontOrigin(QFont *font)
+QFont VocableFactory::setFontOrigin(QFont font)
 {
 	fontOrigin = font;
-	Vocable *vocable;
-	foreach(vocable, vocables)
-		vocable->setFontOrigin(fontOrigin);
 	return fontOrigin;
 }
 
-QFont *VocableFactory::setFontTranslation(QFont *font)
+QFont VocableFactory::setFontTranslation(QFont font)
 {
 	fontTranslation = font;
-	Vocable *vocable;
-	foreach(vocable, vocables)
-		vocable->setFontTranslation(fontTranslation);
 	return fontTranslation;
 }
 
@@ -172,7 +164,7 @@ QXmlStreamReader::Error VocableFactory::parseVocable(QXmlStreamReader *xml)
 		return xml->error();
 	}
 
-	Vocable *voc = new Vocable(id, lesson, langOrigin, readings, translations, fontOrigin, fontTranslation);
+	Vocable *voc = new Vocable(id, lesson, langOrigin, readings, translations, &fontOrigin, &fontTranslation);
 	vocables.insert(id, voc);
 
 	return QXmlStreamReader::NoError;

@@ -10,13 +10,13 @@ class VocableFactory
 {
 public:
 	VocableFactory();
-	VocableFactory(QFont *fontOrigin, QFont *fontTranslation);
+	VocableFactory(QFont fontOrigin, QFont fontTranslation);
 
-	QFont *setFontOrigin(QFont *font);
-	QFont *getFontOrigin() { return fontOrigin; }
+	QFont setFontOrigin(QFont font);
+	QFont getFontOrigin() { return fontOrigin; }
 
-	QFont *setFontTranslation(QFont *font);
-	QFont *getFontTranslation() { return fontTranslation; }
+	QFont setFontTranslation(QFont font);
+	QFont getFontTranslation() { return fontTranslation; }
 
 	/// Reads from the vocable data from an XML file an creates the vocables. Returns an error string on parsing errors
 	QString readFromXML(QString path);
@@ -31,7 +31,7 @@ private:
 	QString version;
 	QMap<quint32, Vocable*>	vocables;
 
-	QFont *fontOrigin, *fontTranslation;
+	QFont fontOrigin, fontTranslation;
 };
 
 #endif // VOCABLEFACTORY_H

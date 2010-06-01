@@ -38,7 +38,7 @@ protected:
 private:
 	Ui::Japovoc *ui;
 
-	Vocable *voc;
+	VocableFactory vocableFactory;
 	QGraphicsScene scene;
 	QRect	sceneRect;
 

@@ -14,7 +14,6 @@ Japovoc::Japovoc(QWidget *parent) :
 	sceneRect.setRect(0,0,ui->graphicsView->width(),ui->graphicsView->height());  //(QRect(ui->graphicsView->geometry()));
 	scene.setSceneRect(sceneRect);
 	ui->graphicsView->setScene(&scene);
-	voc = 0;
 
 	fontOrigin = ui->lbJapaneseTitle->font();
 	fontTranslation = ui->lbTitle->font();
@@ -45,17 +44,20 @@ void Japovoc::showAboutBox()
 
 void Japovoc::doMagic()
 {
+	qDebug("Trying some magic...");
 	scene.clear();
 	sceneRect.setRect(0,0,ui->graphicsView->width(),ui->graphicsView->height());
 	scene.setSceneRect(sceneRect);
 
-	VocableFactory vocFac;
+	vocableFactory.setFontOrigin(ui->lbJapaneseTitle->font());
+	vocableFactory.setFontTranslation(ui->lbTitle->font());
 
-	QString errorString = vocFac.readFromXML("../sample_vocable_data.xml");
+	qDebug("Vocables cleared = %d", vocableFactory.clearVocables());
+
+	QString errorString = vocableFactory.readFromXML("../sample_vocable_data.xml");
 	if(!errorString.isEmpty())
 		QMessageBox::critical(this, tr("Error"), errorString);
 
 	scene.update();
 	qDebug("Kazam... did magic!");
-	this->close();
 }
