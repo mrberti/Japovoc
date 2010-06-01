@@ -1,11 +1,11 @@
-# linux binary
-Japovoc
-# windows folders
-source/debug/	 
-source/release/	
-*.o
-*.exe
-# Qt compiler generated
-moc_japovoc*
+# unclean compiler things
+moc_*
 *.user
 Makefile*
+*.o
+# Linux binaries
+Japovoc
+# Windows folders and binaries
+debug/
+release/
+*.exe
