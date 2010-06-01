@@ -32,10 +32,10 @@ void Vocable::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, Q
 	Q_UNUSED(widget);
 	painter->drawRect(bounds);
 	painter->setFont(*fontOrigin);
-	painter->drawText(bounds.x() + 20, bounds.y() + 35, this->readings.first().reading);
+	painter->drawText(bounds.x() + 20, bounds.y() + 35, this->readings.first().kanji);
+	painter->drawText(bounds.x() + 20, bounds.y() + 70, this->readings.first().reading);
 	painter->setFont(*fontTranslation);
 	painter->drawText(bounds.x() + 20, bounds.y() + bounds.height() - 20, this->translations.first().meaning);
-	qDebug("blubbi");
 }
 
 QString Vocable::print()

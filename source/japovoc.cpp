@@ -60,7 +60,8 @@ void Japovoc::doMagic()
 	vocableFactory.setVisible(1);
 	vocableFactory.setAllBounds(sceneRect);
 
-	qDebug("numAdded = %d",vocableFactory.addAllToScene());
+	vocableFactory.addAllToScene();
+
 	scene.update();
 	qDebug("Kazam... did magic!");
 }

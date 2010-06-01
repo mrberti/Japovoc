@@ -79,6 +79,7 @@ QXmlStreamReader::Error VocableFactory::parseVocable(QXmlStreamReader *xml)
 	quint32							id;
 	quint16							lesson;
 	QString							langOrigin;
+	QString							kanji;
 	Vocable::reading_t				reading;
 	Vocable::translation_t			translation;
 	QList<Vocable::reading_t>		readings;
@@ -101,21 +102,24 @@ QXmlStreamReader::Error VocableFactory::parseVocable(QXmlStreamReader *xml)
 	{
 		if(xml->isStartElement()) {
 			if(name == "origin") {
+				kanji = "";
 				langOrigin = xml->attributes().value("lang").toString();
 				xml->readNextStartElement();
 				name = xml->name().toString();
 				while(!xml->isEndElement() && !xml->hasError())
 				{
-					if(name == "reading") {
-						reading.primary = xml->attributes().hasAttribute("primary");
-						reading.yomi = xml->attributes().value("yomi").toString();
-						reading.reading = xml->readElementText();
+					if(name == "kanji") {
+						kanji = xml->readElementText();
+						reading.kanji = kanji;
 					}
 					else if(name == "okurigana") {
 						reading.okurigana = xml->readElementText();
 					}
-					else if(name == "kanji") {
-						reading.kanji = xml->readElementText();
+					else if(name == "reading") {
+						reading.kanji = kanji;
+						reading.primary = xml->attributes().hasAttribute("primary");
+						reading.yomi = xml->attributes().value("yomi").toString();
+						reading.reading = xml->readElementText();
 					}
 					else {
 						xml->raiseError(QString(QObject::tr("Read unexpected tag %1 in line %1").arg(name).arg(xml->lineNumber())));
