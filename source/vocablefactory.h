@@ -10,9 +10,16 @@ class VocableFactory
 {
 public:
 	VocableFactory();
+	VocableFactory(QFont *fontOrigin, QFont *fontTranslation);
 
 	/// Reads from the vocable data from an XML file an creates the vocables. Returns an error string on parsing errors
 	QString readFromXML(QString path);
+
+	QFont *setFontOrigin(QFont *font);
+	QFont *getFontOrigin() { return fontOrigin; }
+
+	QFont *setFontTranslation(QFont *font);
+	QFont *getFontTranslation() { return fontTranslation; }
 
 private:
 	/// Parses one Vocable

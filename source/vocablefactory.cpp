@@ -2,6 +2,29 @@
 
 VocableFactory::VocableFactory()
 {
+	fontOrigin = 0;
+	fontTranslation = 0;
+}
+
+VocableFactory::VocableFactory(QFont *fontOrigin, QFont *fontTranslation)
+	: fontOrigin(fontOrigin), fontTranslation(fontTranslation)
+{}
+
+QFont *VocableFactory::setFontOrigin(QFont *font)
+{
+	fontOrigin = font;
+	Vocable *vocable;
+	foreach(vocable, vocables)
+	{
+
+	}
+	return fontOrigin;
+}
+
+QFont *VocableFactory::setFontTranslation(QFont *font)
+{
+	fontTranslation = font;
+	return fontTranslation;
 }
 
 QString VocableFactory::readFromXML(QString path)
