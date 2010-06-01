@@ -186,3 +186,14 @@ quint32 VocableFactory::clearVocables()
 	}
 	return numDeleted;
 }
+
+quint32 VocableFactory::addAllToScene()
+{
+	quint32 numAdded = 0;
+	Vocable *vocable;
+	foreach(vocable, vocables) {
+		scene->addItem(vocable);
+		numAdded++;
+	}
+	return numAdded;
+}

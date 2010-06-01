@@ -49,8 +49,12 @@ void Japovoc::doMagic()
 	sceneRect.setRect(0,0,ui->graphicsView->width(),ui->graphicsView->height());
 	scene.setSceneRect(sceneRect);
 
+	vocableFactory.setScene(&scene);
+
 	vocableFactory.setFontOrigin(ui->lbJapaneseTitle->font());
 	vocableFactory.setFontTranslation(ui->lbTitle->font());
+
+	vocableFactory.addAllToScene();
 
 	qDebug("Vocables cleared = %d", vocableFactory.clearVocables());
 
