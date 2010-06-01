@@ -39,14 +39,20 @@ public:
 	/// Returns a string containing some data about the vocable
 	QString print();
 
+	QFont *setFontOrigin(QFont *font) { fontOrigin = font; return fontOrigin; }
+	QFont *getFontOrigin() { return fontOrigin; }
+
+	QFont *setFontTranslation(QFont *font) { fontTranslation = font; return fontTranslation; }
+	QFont *getFontTranslation() { return fontTranslation; }
+
 private:
 	/// Holds the value for the bounding box
 	QRectF bounds;
 
-	static quint32	maxID;
-	quint32		id;
-	quint16		lesson;
-	QString		langOrigin;
+	static quint32			maxID;
+	quint32					id;
+	quint16					lesson;
+	QString					langOrigin;
 	QList<reading_t>		readings;
 	QList<translation_t>	translations;
 
