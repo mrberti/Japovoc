@@ -31,10 +31,10 @@ void Vocable::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, Q
 	Q_UNUSED(option);
 	Q_UNUSED(widget);
 	painter->drawRect(bounds);
-	//QString blub("deine mudda");
-	//painter->setFont(*fontOrigin);
-	//painter->drawText(0,20,this->print());
-	//painter->drawText(0,50,readings.first().reading);
+	painter->setFont(*fontOrigin);
+	painter->drawText(bounds.x() + 20, bounds.y() + 35, this->readings.first().reading);
+	painter->setFont(*fontTranslation);
+	painter->drawText(bounds.x() + 20, bounds.y() + bounds.height() - 20, this->translations.first().meaning);
 	qDebug("blubbi");
 }
 
