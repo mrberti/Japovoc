@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'japovoc.ui'
 **
-** Created: Sun 30. May 21:19:31 2010
+** Created: Thu 3. Jun 00:24:37 2010
 **      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -60,7 +60,7 @@ public:
     {
         if (Japovoc->objectName().isEmpty())
             Japovoc->setObjectName(QString::fromUtf8("Japovoc"));
-        Japovoc->resize(593, 405);
+        Japovoc->resize(500, 428);
         actionQuit = new QAction(Japovoc);
         actionQuit->setObjectName(QString::fromUtf8("actionQuit"));
         actionPreferences = new QAction(Japovoc);
@@ -105,6 +105,7 @@ public:
 
         graphicsView = new QGraphicsView(centralWidget);
         graphicsView->setObjectName(QString::fromUtf8("graphicsView"));
+        graphicsView->setMinimumSize(QSize(300, 175));
         graphicsView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         graphicsView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
@@ -135,7 +136,7 @@ public:
         Japovoc->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(Japovoc);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 593, 21));
+        menuBar->setGeometry(QRect(0, 0, 500, 21));
         menuFile = new QMenu(menuBar);
         menuFile->setObjectName(QString::fromUtf8("menuFile"));
         menuEdit = new QMenu(menuBar);
