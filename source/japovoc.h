@@ -43,10 +43,8 @@ private:
 	QGraphicsScene scene;
 	QRect	sceneRect;
 
-	QFont fontOrigin;
-	QFont fontTranslation;
-
-
+	QFont *fontA;
+	QFont *fontB;
 };
 
 #endif // JAPOVOC_H

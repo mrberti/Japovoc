@@ -2,25 +2,17 @@
 
 VocableFactory::VocableFactory()
 {
-	clearVocables();
+	fonts.fontKanji = 0;
+	fonts.fontMeaning = 0;
+	fonts.fontPrimaryOrigin = 0;
+	fonts.fontPrimaryTranslation = 0;
+	fonts.fontReading = 0;
 }
 
-VocableFactory::VocableFactory(QFont fontOrigin, QFont fontTranslation)
-	: fontOrigin(fontOrigin), fontTranslation(fontTranslation)
+VocableFactory::VocableFactory(Vocable::fonts_t fonts)
+	: fonts(fonts)
 {
-	qDebug("Vocables cleared = %d", clearVocables());
-}
 
-QFont VocableFactory::setFontOrigin(QFont font)
-{
-	fontOrigin = font;
-	return fontOrigin;
-}
-
-QFont VocableFactory::setFontTranslation(QFont font)
-{
-	fontTranslation = font;
-	return fontTranslation;
 }
 
 QString VocableFactory::readFromXML(QString path)
@@ -168,7 +160,7 @@ QXmlStreamReader::Error VocableFactory::parseVocable(QXmlStreamReader *xml)
 		return xml->error();
 	}
 
-	Vocable *voc = new Vocable(id, lesson, langOrigin, readings, translations, &fontOrigin, &fontTranslation);
+	Vocable *voc = new Vocable(id, lesson, langOrigin, readings, translations, fonts);
 	vocables.insert(id, voc);
 
 	return QXmlStreamReader::NoError;
@@ -198,12 +190,8 @@ quint32 VocableFactory::addAllToScene()
 	foreach(vocable, vocables) {
 		scene->addItem(vocable);
 		numAdded++;
-		qDebug(vocable->print().toAscii());
 	}
 	scene->update();
-
-
-
 	return numAdded;
 }
 

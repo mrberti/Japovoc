@@ -1,4 +1,6 @@
 # Just some thoughts for me
 
-* improve font handling
-	- implement fonts for kanji, okurigana, primary etc...
+* options
+	- options class
+	- options ui
+	- use QSettings

@@ -15,8 +15,6 @@ Japovoc::Japovoc(QWidget *parent) :
 	scene.setSceneRect(sceneRect);
 	ui->graphicsView->setScene(&scene);
 
-	fontOrigin = ui->lbJapaneseTitle->font();
-	fontTranslation = ui->lbTitle->font();
 }
 
 Japovoc::~Japovoc()
@@ -49,13 +47,27 @@ void Japovoc::doMagic()
 	sceneRect.setRect(0,0,ui->graphicsView->width(),ui->graphicsView->height());
 	scene.setSceneRect(sceneRect);
 
+	fontA = new QFont();
+	fontB = new QFont();
+
+	*fontA = ui->lbJapaneseTitle->font();
+	*fontB = ui->lbTitle->font();
+
+	Vocable::fonts_t fonts;
+	fonts.fontKanji = fontA;
+	fonts.fontReading = fontA;
+	fonts.fontPrimaryOrigin = fontA;
+	fonts.fontMeaning = fontB;
+	fonts.fontPrimaryTranslation = fontB;
+
+	vocableFactory.setFonts(fonts);
+
 	QString errorString = vocableFactory.readFromXML("../sample_vocable_data.xml");
 	if(!errorString.isEmpty())
 		QMessageBox::critical(this, tr("Error"), errorString);
+
 	vocableFactory.setScene(&scene);
 
-	vocableFactory.setFontOrigin(ui->lbJapaneseTitle->font());
-	vocableFactory.setFontTranslation(ui->lbTitle->font());
 
 	vocableFactory.setVisible(1);
 	vocableFactory.setAllBounds(sceneRect);

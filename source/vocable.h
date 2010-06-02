@@ -17,7 +17,7 @@ public:
 		QString okurigana;		// for this kanji
 	} reading_t;
 
-	/// This struct hold one translation
+	/// This struct holds one translation
 	typedef struct {
 		bool	primary;		// this meaning is exposed
 		quint32	id;
@@ -25,9 +25,11 @@ public:
 		QString meaning;		// meaning of the origin word
 	} meaning_t;
 
+	/// This struct holds pointer to the fonts
 	typedef struct {
 		QFont *fontKanji;
 		QFont *fontReading;
+		QFont *fontMeaning;
 		QFont *fontPrimaryOrigin;
 		QFont *fontPrimaryTranslation;
 	} fonts_t;
@@ -39,14 +41,11 @@ public:
 
 	/// Constructor
 	Vocable();
-	Vocable(quint32 id, quint16 lesson, QString langOrigin, readings_t readings, translations_t translations, QFont *fontOrigin, QFont *fontTranslation);
+	Vocable(quint32 id, quint16 lesson, QString langOrigin, readings_t readings, translations_t translations, fonts_t fonts);
 	~Vocable();
 
-	QFont *setFontOrigin(QFont *font) { fontOrigin = font; return fontOrigin; }
-	QFont *getFontOrigin() { return fontOrigin; }
-
-	QFont *setFontTranslation(QFont *font) { fontTranslation = font; return fontTranslation; }
-	QFont *getFontTranslation() { return fontTranslation; }
+	fonts_t setFonts(fonts_t fonts) { this->fonts = fonts; return this->fonts; }
+	fonts_t getFonts() { return this->fonts; }
 
 	QRectF setBounds(QRectF bounds);
 
@@ -70,8 +69,6 @@ private:
 	readings_t				readings;
 	translations_t			translations;
 
-	QFont *fontOrigin;
-	QFont *fontTranslation;
 	fonts_t	fonts;
 };
 

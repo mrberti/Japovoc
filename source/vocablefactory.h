@@ -10,13 +10,10 @@ class VocableFactory
 {
 public:
 	VocableFactory();
-	VocableFactory(QFont fontOrigin, QFont fontTranslation);
+	VocableFactory(Vocable::fonts_t fonts);
 
-	QFont setFontOrigin(QFont font);
-	QFont getFontOrigin() { return fontOrigin; }
-
-	QFont setFontTranslation(QFont font);
-	QFont getFontTranslation() { return fontTranslation; }
+	Vocable::fonts_t setFonts(Vocable::fonts_t fonts) { this->fonts = fonts; return this->fonts; }
+	Vocable::fonts_t getFonts() { return this->fonts; }
 
 	void setScene(QGraphicsScene *scene) { this->scene = scene; }
 
@@ -40,7 +37,7 @@ private:
 	QString version;
 	QMap<quint32, Vocable*>	vocables;
 
-	QFont fontOrigin, fontTranslation;
+	Vocable::fonts_t	fonts;
 	QGraphicsScene	*scene;
 };
 

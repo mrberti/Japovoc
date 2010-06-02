@@ -4,15 +4,18 @@ quint32	Vocable::maxID = 0;
 
 Vocable::Vocable()
 {
+	fonts.fontKanji = 0;
+	fonts.fontMeaning = 0;
+	fonts.fontPrimaryOrigin = 0;
+	fonts.fontPrimaryTranslation = 0;
+	fonts.fontReading = 0;
 	id = ++maxID;
 	lesson = 0;
-	fontOrigin = 0;
-	fontTranslation = 0;
 	setVisible(false);
 }
 
-Vocable::Vocable(quint32 id, quint16 lesson, QString langOrigin, readings_t readings, translations_t translations, QFont *fontOrigin, QFont *fontTranslation)
-	: id(id), lesson(lesson), langOrigin(langOrigin), readings(readings), translations(translations), fontOrigin(fontOrigin), fontTranslation(fontTranslation)
+Vocable::Vocable(quint32 id, quint16 lesson, QString langOrigin, readings_t readings, translations_t translations, fonts_t fonts)
+	: id(id), lesson(lesson), langOrigin(langOrigin), readings(readings), translations(translations), fonts(fonts)
 {
 	// assert that maxID ist always the highest value
 	if(id > maxID)
@@ -31,12 +34,11 @@ void Vocable::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, Q
 	Q_UNUSED(option);
 	Q_UNUSED(widget);
 	painter->drawRect(bounds);
-	painter->setFont(*fontOrigin);
-	//painter->drawText(bounds.x() + 20, bounds.y() + 35, this->readings.first().kanji);
-	//painter->drawText(bounds.x() + 20, bounds.y() + 70, this->readings.first().reading);
-	painter->setFont(*fontTranslation);
-	painter->drawText(bounds, print());
-	//painter->drawText(bounds.x() + 20, bounds.y() + bounds.height() - 20, this->translations.first().meaning);
+	painter->setFont(*fonts.fontPrimaryOrigin);
+	painter->drawText(bounds.x() + 20, bounds.y() + 35, this->readings[1].kanji);
+	painter->drawText(bounds.x() + 20, bounds.y() + 70, this->readings[1].reading);
+	painter->setFont(*fonts.fontPrimaryTranslation);
+	painter->drawText(bounds.x() + 20, bounds.y() + bounds.height() - 20, this->translations.value("german").value(1).meaning);
 }
 
 QString Vocable::print()
