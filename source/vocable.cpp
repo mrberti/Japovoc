@@ -11,7 +11,7 @@ Vocable::Vocable()
 	setVisible(false);
 }
 
-Vocable::Vocable(quint32 id, quint16 lesson, QString langOrigin, QList<reading_t> readings, QList<translation_t> translations, QFont *fontOrigin, QFont *fontTranslation)
+Vocable::Vocable(quint32 id, quint16 lesson, QString langOrigin, readings_t readings, QList<translation_t> translations, QFont *fontOrigin, QFont *fontTranslation)
 	: id(id), lesson(lesson), langOrigin(langOrigin), readings(readings), translations(translations), fontOrigin(fontOrigin), fontTranslation(fontTranslation)
 {
 	// assert that maxID ist always the highest value
@@ -32,20 +32,27 @@ void Vocable::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, Q
 	Q_UNUSED(widget);
 	painter->drawRect(bounds);
 	painter->setFont(*fontOrigin);
-	painter->drawText(bounds.x() + 20, bounds.y() + 35, this->readings.first().kanji);
-	painter->drawText(bounds.x() + 20, bounds.y() + 70, this->readings.first().reading);
+	//painter->drawText(bounds.x() + 20, bounds.y() + 35, this->readings.first().kanji);
+	//painter->drawText(bounds.x() + 20, bounds.y() + 70, this->readings.first().reading);
 	painter->setFont(*fontTranslation);
-	painter->drawText(bounds.x() + 20, bounds.y() + bounds.height() - 20, this->translations.first().meaning);
+	painter->drawText(bounds, print());
+	//painter->drawText(bounds.x() + 20, bounds.y() + bounds.height() - 20, this->translations.first().meaning);
 }
 
 QString Vocable::print()
 {
-	QString str;
+	QString		str;
+	reading_t	reading;
 	str = QString("Vocable>> ID = %1, Lesson = %2,").arg(this->id).arg(this->lesson);
 	str += " langOrigin = " + this->langOrigin;
-	str += ", readingsfirst = " + this->readings.first().reading;
-	str += ", yomi = " + this->readings.first().yomi;
-	str += ", translatioinsfirst = " + this->translations.first().meaning;
+	str += "\n readings: size = " + QString("%1").arg(this->readings.size());
+	foreach(reading, readings)
+	{
+		str += "\n reading = " + reading.reading;
+		str += ", kanji = " + reading.kanji;
+		str += ", okurigana = " + reading.okurigana;
+		str += ", yomi = " + reading.yomi;
+	}
 	return str;
 }
 

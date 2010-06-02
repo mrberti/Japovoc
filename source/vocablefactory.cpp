@@ -77,12 +77,13 @@ QXmlStreamReader::Error VocableFactory::parseVocable(QXmlStreamReader *xml)
 	QString name = xml->name().toString();
 
 	quint32							id;
+	quint32							id2;		// ids for meanings and readings
 	quint16							lesson;
 	QString							langOrigin;
 	QString							kanji;
 	Vocable::reading_t				reading;
 	Vocable::translation_t			translation;
-	QList<Vocable::reading_t>		readings;
+	Vocable::readings_t						readings;
 	QList<Vocable::translation_t>	translations;
 
 	if(name == "vocable") {
@@ -113,22 +114,20 @@ QXmlStreamReader::Error VocableFactory::parseVocable(QXmlStreamReader *xml)
 						reading.kanji = kanji;
 					}
 					else if(name == "okurigana") {
-						reading.okurigana = xml->readElementText();
+						readings[id2].okurigana = xml->readElementText();
 					}
 					else if(name == "reading") {
+						id2 = xml->attributes().value("id").toString().toInt();
 						reading.kanji = kanji;
 						reading.primary = xml->attributes().hasAttribute("primary");
 						reading.yomi = xml->attributes().value("yomi").toString();
 						reading.reading = xml->readElementText();
+						readings.insert(id2, reading);
 					}
 					else {
 						xml->raiseError(QString(QObject::tr("Read unexpected tag %1 in line %1").arg(name).arg(xml->lineNumber())));
 					}
 
-					if(reading.primary)
-						readings.prepend(reading);
-					else
-						readings.append(reading);
 					xml->readNextStartElement();
 					name = xml->name().toString();
 				}
@@ -198,8 +197,12 @@ quint32 VocableFactory::addAllToScene()
 	foreach(vocable, vocables) {
 		scene->addItem(vocable);
 		numAdded++;
+		qDebug(vocable->print().toAscii());
 	}
 	scene->update();
+
+
+
 	return numAdded;
 }
 
