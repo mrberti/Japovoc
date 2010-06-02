@@ -11,7 +11,7 @@ Vocable::Vocable()
 	setVisible(false);
 }
 
-Vocable::Vocable(quint32 id, quint16 lesson, QString langOrigin, readings_t readings, QList<translation_t> translations, QFont *fontOrigin, QFont *fontTranslation)
+Vocable::Vocable(quint32 id, quint16 lesson, QString langOrigin, readings_t readings, translations_t translations, QFont *fontOrigin, QFont *fontTranslation)
 	: id(id), lesson(lesson), langOrigin(langOrigin), readings(readings), translations(translations), fontOrigin(fontOrigin), fontTranslation(fontTranslation)
 {
 	// assert that maxID ist always the highest value
@@ -43,15 +43,26 @@ QString Vocable::print()
 {
 	QString		str;
 	reading_t	reading;
-	str = QString("Vocable>> ID = %1, Lesson = %2,").arg(this->id).arg(this->lesson);
+	meaning_t	meaning;
+	meanings_t	meanings;
+	str = QString("\n<<Vocable>>\nID = %1, Lesson = %2,").arg(this->id).arg(this->lesson);
 	str += " langOrigin = " + this->langOrigin;
-	str += "\n readings: size = " + QString("%1").arg(this->readings.size());
+	str += "\nreadings: size = " + QString("%1").arg(this->readings.size());
 	foreach(reading, readings)
 	{
-		str += "\n reading = " + reading.reading;
+		str += "\nID = " + QString("%1").arg(reading.id);
+		str += ", reading = " + reading.reading;
 		str += ", kanji = " + reading.kanji;
-		str += ", okurigana = " + reading.okurigana;
 		str += ", yomi = " + reading.yomi;
+		if(!reading.okurigana.isEmpty())
+			str += ", okurigana = " + reading.okurigana;
+
+		foreach(meanings, translations)
+		{
+			str += "\n-> lang = " + meanings[reading.id].language;
+			str += ", ID = " + QString("%1").arg(meanings[reading.id].id);
+			str += ", meaning = " + meanings[reading.id].meaning;
+		}
 	}
 	return str;
 }

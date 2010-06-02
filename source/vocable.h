@@ -10,6 +10,7 @@ public:
 	/// This struct holds one reading of a vocable
 	typedef struct {
 		bool	primary;		// this reading is exposed
+		quint32	id;
 		QString yomi;			// on or kun reading
 		QString	kanji;			// kanji character
 		QString reading;		// kana
@@ -19,14 +20,9 @@ public:
 	/// This struct hold one translation
 	typedef struct {
 		bool	primary;		// this meaning is exposed
+		quint32	id;
 		QString language;		// language of the translation
 		QString meaning;		// meaning of the origin word
-	} translation_t;
-
-	typedef struct {
-		bool	primary;
-		QString language;
-		QString meaning;
 	} meaning_t;
 
 	typedef struct {
@@ -38,11 +34,12 @@ public:
 
 	typedef QMap<quint32, reading_t>	readings_t;
 	typedef QMap<quint32, meaning_t>	meanings_t;
+	/// Key is the language
 	typedef QMap<QString, meanings_t>	translations_t;
 
 	/// Constructor
 	Vocable();
-	Vocable(quint32 id, quint16 lesson, QString langOrigin, readings_t readings, QList<translation_t> translations, QFont *fontOrigin, QFont *fontTranslation);
+	Vocable(quint32 id, quint16 lesson, QString langOrigin, readings_t readings, translations_t translations, QFont *fontOrigin, QFont *fontTranslation);
 	~Vocable();
 
 	QFont *setFontOrigin(QFont *font) { fontOrigin = font; return fontOrigin; }
@@ -71,7 +68,7 @@ private:
 	quint16					lesson;
 	QString					langOrigin;
 	readings_t				readings;
-	QList<translation_t>	translations;
+	translations_t			translations;
 
 	QFont *fontOrigin;
 	QFont *fontTranslation;

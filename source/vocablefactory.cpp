@@ -82,9 +82,10 @@ QXmlStreamReader::Error VocableFactory::parseVocable(QXmlStreamReader *xml)
 	QString							langOrigin;
 	QString							kanji;
 	Vocable::reading_t				reading;
-	Vocable::translation_t			translation;
-	Vocable::readings_t						readings;
-	QList<Vocable::translation_t>	translations;
+	Vocable::meaning_t				meaning;
+	Vocable::meanings_t				meanings;
+	Vocable::readings_t				readings;
+	Vocable::translations_t			translations;
 
 	if(name == "vocable") {
 		id = xml->attributes().value("id").toString().toInt();
@@ -118,6 +119,7 @@ QXmlStreamReader::Error VocableFactory::parseVocable(QXmlStreamReader *xml)
 					}
 					else if(name == "reading") {
 						id2 = xml->attributes().value("id").toString().toInt();
+						reading.id = id2;
 						reading.kanji = kanji;
 						reading.primary = xml->attributes().hasAttribute("primary");
 						reading.yomi = xml->attributes().value("yomi").toString();
@@ -133,24 +135,23 @@ QXmlStreamReader::Error VocableFactory::parseVocable(QXmlStreamReader *xml)
 				}
 			}
 			else if(name == "translation") {
-				translation.language = xml->attributes().value("lang").toString();
+				meaning.language = xml->attributes().value("lang").toString();
 				xml->readNextStartElement();
 				name = xml->name().toString();
 				while(!xml->isEndElement() && !xml->hasError())
 				{
-
 					if(name == "meaning") {
-						translation.meaning = xml->readElementText();
-						translation.primary = xml->attributes().hasAttribute("primary");
+						id2 = xml->attributes().value("id").toString().toInt();
+						meaning.id = id2;
+						meaning.meaning = xml->readElementText();
+						meaning.primary = xml->attributes().hasAttribute("primary");
+						meanings.insert(id2, meaning);
 					}
 					else {
 						xml->raiseError(QString(QObject::tr("Read unexpected tag %1 in line %1").arg(name).arg(xml->lineNumber())));
 					}
+					translations.insert(meaning.language,meanings);
 
-					if(translation.primary)
-						translations.prepend(translation);
-					else
-						translations.append(translation);
 					xml->readNextStartElement();
 					name = xml->name().toString();
 				}

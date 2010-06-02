@@ -8,15 +8,14 @@
 			<okurigana>oku1</okurigana><!--Okurigana must follow the corresponding reading-->
 			<reading id="2">reading2</reading><!--id matches the okurigana-->
 			<okurigana>oku2</okurigana>
-			<reading id="3" yomi="kun3">reading3</reading>
-			<reading id="4" yomi="on4">reading4</reading>	
 		</origin>
 		<translation lang="german"><!--One translation. lang indicates the language to which is to translate-->
 			<meaning id="1" primary="true">Hinweg</meaning><!--Can have multiple meanings but only one primary-->
 			<meaning id="2">gehen</meaning><!--id matches the corresponding reading-->
 		</translation>
 		<translation lang="english">
-			<meaning primary="true">half</meaning>
+			<meaning id="1" primary="true">half</meaning>
+			<meaning id="2" primary="true">halfhalf</meaning>
 		</translation>
 	</vocable>
 	<!--This is the common way for the trainer-->
@@ -26,6 +25,9 @@
 		</origin>
 		<translation lang="german">
 			<meaning id="1" primary="true">Schreibtisch</meaning>
+		</translation>
+		<translation lang="english">
+			<meaning id="1" primary="true">desk</meaning>
 		</translation>
 	</vocable>
 </japovoc>
