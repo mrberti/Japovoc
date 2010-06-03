@@ -59,9 +59,8 @@ void Preferences::initLanguage()
 void Preferences::setLanguage()
 {
 	language = ui->cbLanguage->itemData(ui->cbLanguage->currentIndex()).toString();
-	QTranslator translator;
-	translator.load(language, "Translations");
-	QApplication::installTranslator(&translator);
+	/*if(language != initialLanguage)
+		QMessageBox::information(this, QObject::tr("Information"), QObject::tr("The application must be restarted to change the language."));*/
 }
 
 void Preferences::applyChanges()

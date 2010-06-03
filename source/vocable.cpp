@@ -5,6 +5,7 @@ quint32	Vocable::maxID = 0;
 Vocable::Vocable()
 {
 	fonts.fontKanji = 0;
+	fonts.fontOkurigana = 0;
 	fonts.fontTranslation = 0;
 	fonts.fontPrimaryOrigin = 0;
 	fonts.fontPrimaryTranslation = 0;

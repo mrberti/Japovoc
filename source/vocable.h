@@ -28,6 +28,7 @@ public:
 	/// This struct holds pointer to the fonts
 	typedef struct {
 		QFont *fontKanji;
+		QFont *fontOkurigana;
 		QFont *fontReading;
 		QFont *fontTranslation;
 		QFont *fontPrimaryOrigin;

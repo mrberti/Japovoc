@@ -62,6 +62,7 @@ void Japovoc::doMagic()
 
 	Vocable::fonts_t fonts;
 	fonts.fontKanji = fontA;
+	fonts.fontOkurigana = fontA;
 	fonts.fontReading = fontA;
 	fonts.fontPrimaryOrigin = fontA;
 	fonts.fontTranslation = fontB;
