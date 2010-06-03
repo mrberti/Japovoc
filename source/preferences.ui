@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Japovoc Preferences</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_3">
    <item>
@@ -44,8 +44,11 @@
             <layout class="QHBoxLayout" name="horizontalLayout">
              <item>
               <widget class="QLabel" name="label_3">
+               <property name="toolTip">
+                <string>The font the Kanji appears.</string>
+               </property>
                <property name="text">
-                <string>Kanji Font:</string>
+                <string>Kanji font:</string>
                </property>
               </widget>
              </item>
@@ -91,8 +94,11 @@
             <layout class="QHBoxLayout" name="horizontalLayout_4">
              <item>
               <widget class="QLabel" name="label_6">
+               <property name="toolTip">
+                <string>The font the primary reagin appears.</string>
+               </property>
                <property name="text">
-                <string>Primary Reading Font:</string>
+                <string>Primary reading font:</string>
                </property>
               </widget>
              </item>
@@ -140,8 +146,11 @@
             <layout class="QHBoxLayout" name="horizontalLayout_2">
              <item>
               <widget class="QLabel" name="label_4">
+               <property name="toolTip">
+                <string>The font the readings appear.</string>
+               </property>
                <property name="text">
-                <string>Reading Font:</string>
+                <string>Reading font:</string>
                </property>
               </widget>
              </item>
@@ -187,8 +196,11 @@
             <layout class="QHBoxLayout" name="horizontalLayout_5">
              <item>
               <widget class="QLabel" name="label_2">
+               <property name="toolTip">
+                <string>The font the okurigana appear.</string>
+               </property>
                <property name="text">
-                <string>Okurigana Font:</string>
+                <string>Okurigana font:</string>
                </property>
               </widget>
              </item>
@@ -234,8 +246,11 @@
             <layout class="QHBoxLayout" name="horizontalLayout_7">
              <item>
               <widget class="QLabel" name="label_5">
+               <property name="toolTip">
+                <string>The font the primary translation appears.</string>
+               </property>
                <property name="text">
-                <string>Primary Translation Font:</string>
+                <string>Primary translation font:</string>
                </property>
               </widget>
              </item>
@@ -266,7 +281,7 @@
                 <enum>Qt::RightToLeft</enum>
                </property>
                <property name="text">
-                <string>Primary Translation</string>
+                <string>Primary translation</string>
                </property>
               </widget>
              </item>
@@ -283,8 +298,11 @@
             <layout class="QHBoxLayout" name="horizontalLayout_6">
              <item>
               <widget class="QLabel" name="label">
+               <property name="toolTip">
+                <string>The font the Translation appears.</string>
+               </property>
                <property name="text">
-                <string>Translation Font:</string>
+                <string>Translation font:</string>
                </property>
               </widget>
              </item>
@@ -313,7 +331,7 @@
                 <enum>Qt::RightToLeft</enum>
                </property>
                <property name="text">
-                <string>Translation</string>
+                <string>translation</string>
                </property>
               </widget>
              </item>
@@ -385,8 +403,11 @@
      </item>
      <item>
       <widget class="QPushButton" name="btResetPreferences">
+       <property name="toolTip">
+        <string>Resets the preferences. Changes are applied when the buttons Ok or Apply are clicked.</string>
+       </property>
        <property name="text">
-        <string>&amp;Reset Preferences</string>
+        <string>&amp;Reset</string>
        </property>
       </widget>
      </item>

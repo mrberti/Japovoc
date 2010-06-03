@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'preferences.ui'
 **
-** Created: Thu 3. Jun 18:45:59 2010
+** Created: Thu 3. Jun 18:57:37 2010
 **      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -341,31 +341,52 @@ public:
 
     void retranslateUi(QDialog *Preferences)
     {
-        Preferences->setWindowTitle(QApplication::translate("Preferences", "Dialog", 0, QApplication::UnicodeUTF8));
+        Preferences->setWindowTitle(QApplication::translate("Preferences", "Japovoc Preferences", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("Preferences", "&General", 0, QApplication::UnicodeUTF8));
-        label_3->setText(QApplication::translate("Preferences", "Kanji Font:", 0, QApplication::UnicodeUTF8));
+#ifndef QT_NO_TOOLTIP
+        label_3->setToolTip(QApplication::translate("Preferences", "The font the Kanji appears.", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_TOOLTIP
+        label_3->setText(QApplication::translate("Preferences", "Kanji font:", 0, QApplication::UnicodeUTF8));
         lbKanjiFontSample->setText(QApplication::translate("Preferences", "\346\227\245\346\234\254\350\252\236", 0, QApplication::UnicodeUTF8));
         btEditKanjiFont->setText(QApplication::translate("Preferences", "Edit...", 0, QApplication::UnicodeUTF8));
-        label_6->setText(QApplication::translate("Preferences", "Primary Reading Font:", 0, QApplication::UnicodeUTF8));
+#ifndef QT_NO_TOOLTIP
+        label_6->setToolTip(QApplication::translate("Preferences", "The font the primary reagin appears.", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_TOOLTIP
+        label_6->setText(QApplication::translate("Preferences", "Primary reading font:", 0, QApplication::UnicodeUTF8));
         lbPrimaryReadingFontSample->setText(QApplication::translate("Preferences", "\343\202\253\343\202\277\343\202\253\343\203\212", 0, QApplication::UnicodeUTF8));
         btEditPrimaryReadingFont->setText(QApplication::translate("Preferences", "Edit...", 0, QApplication::UnicodeUTF8));
-        label_4->setText(QApplication::translate("Preferences", "Reading Font:", 0, QApplication::UnicodeUTF8));
+#ifndef QT_NO_TOOLTIP
+        label_4->setToolTip(QApplication::translate("Preferences", "The font the readings appear.", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_TOOLTIP
+        label_4->setText(QApplication::translate("Preferences", "Reading font:", 0, QApplication::UnicodeUTF8));
         lbReadingFontSample->setText(QApplication::translate("Preferences", "\343\201\262\343\202\211\343\201\214\343\201\252", 0, QApplication::UnicodeUTF8));
         btEditReadingFont->setText(QApplication::translate("Preferences", "Edit...", 0, QApplication::UnicodeUTF8));
-        label_2->setText(QApplication::translate("Preferences", "Okurigana Font:", 0, QApplication::UnicodeUTF8));
+#ifndef QT_NO_TOOLTIP
+        label_2->setToolTip(QApplication::translate("Preferences", "The font the okurigana appear.", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_TOOLTIP
+        label_2->setText(QApplication::translate("Preferences", "Okurigana font:", 0, QApplication::UnicodeUTF8));
         lbOkuriganaFontSample->setText(QApplication::translate("Preferences", "\343\201\212\343\201\217\343\202\212\343\201\214\343\201\252", 0, QApplication::UnicodeUTF8));
         btEditOkuriganaFont->setText(QApplication::translate("Preferences", "Edit...", 0, QApplication::UnicodeUTF8));
-        label_5->setText(QApplication::translate("Preferences", "Primary Translation Font:", 0, QApplication::UnicodeUTF8));
-        lbPrimaryTranslationFontSample->setText(QApplication::translate("Preferences", "Primary Translation", 0, QApplication::UnicodeUTF8));
+#ifndef QT_NO_TOOLTIP
+        label_5->setToolTip(QApplication::translate("Preferences", "The font the primary translation appears.", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_TOOLTIP
+        label_5->setText(QApplication::translate("Preferences", "Primary translation font:", 0, QApplication::UnicodeUTF8));
+        lbPrimaryTranslationFontSample->setText(QApplication::translate("Preferences", "Primary translation", 0, QApplication::UnicodeUTF8));
         btEditPrimaryTranslationFont->setText(QApplication::translate("Preferences", "Edit...", 0, QApplication::UnicodeUTF8));
-        label->setText(QApplication::translate("Preferences", "Translation Font:", 0, QApplication::UnicodeUTF8));
-        lbTranslationFontSample->setText(QApplication::translate("Preferences", "Translation", 0, QApplication::UnicodeUTF8));
+#ifndef QT_NO_TOOLTIP
+        label->setToolTip(QApplication::translate("Preferences", "The font the Translation appears.", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_TOOLTIP
+        label->setText(QApplication::translate("Preferences", "Translation font:", 0, QApplication::UnicodeUTF8));
+        lbTranslationFontSample->setText(QApplication::translate("Preferences", "translation", 0, QApplication::UnicodeUTF8));
         btEditTranslationFont->setText(QApplication::translate("Preferences", "Edit...", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("Preferences", "&Fonts", 0, QApplication::UnicodeUTF8));
         btOk->setText(QApplication::translate("Preferences", "&Ok", 0, QApplication::UnicodeUTF8));
         btApply->setText(QApplication::translate("Preferences", "&Apply", 0, QApplication::UnicodeUTF8));
         btCancel->setText(QApplication::translate("Preferences", "&Cancel", 0, QApplication::UnicodeUTF8));
-        btResetPreferences->setText(QApplication::translate("Preferences", "&Reset Preferences", 0, QApplication::UnicodeUTF8));
+#ifndef QT_NO_TOOLTIP
+        btResetPreferences->setToolTip(QApplication::translate("Preferences", "Resets the preferences. Changes are applied when the buttons Ok or Apply are clicked.", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_TOOLTIP
+        btResetPreferences->setText(QApplication::translate("Preferences", "&Reset", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };
