@@ -38,8 +38,20 @@ void Preferences::initLanguage()
 	}
 	else
 		initialLanguage = QString("english");
+
 	ui->cbLanguage->addItem(QObject::tr("English"), QString("english"));
-	ui->cbLanguage->addItem(QObject::tr("German"), QString("german"));
+
+	QDir dir("Translations");
+	QStringList filter;
+	filter << "*.qm";
+	QStringList files = dir.entryList(filter, QDir::Files, QDir::Name);
+
+	foreach(QString language, files)
+	{
+		QString languageText = language.remove(".qm");
+		languageText = languageText.at(0).toUpper() + languageText.right(languageText.length()-1);
+		ui->cbLanguage->addItem(languageText, language);
+	}
 
 	ui->cbLanguage->setCurrentIndex(ui->cbLanguage->findData(QVariant(initialLanguage)));
 }

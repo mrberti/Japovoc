@@ -4,4 +4,3 @@
 	- insert okurigana fonts
 	
 * options
-	- find out installed translations automatically
