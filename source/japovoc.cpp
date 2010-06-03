@@ -75,7 +75,7 @@ void Japovoc::doMagic()
 
 	vocableFactory.setFonts(fonts);
 
-	QString errorString = vocableFactory.readFromXML("../sample_vocable_data.xml");
+	QString errorString = vocableFactory.readFromXML("sample_vocable_data.xml");
 	if(!errorString.isEmpty())
 		QMessageBox::critical(this, tr("Error"), errorString);
 

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'aboutdialog.ui'
 **
-** Created: Sun 30. May 20:18:45 2010
+** Created: Thu 3. Jun 19:39:03 2010
 **      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -42,7 +42,7 @@ public:
     {
         if (AboutDialog->objectName().isEmpty())
             AboutDialog->setObjectName(QString::fromUtf8("AboutDialog"));
-        AboutDialog->resize(244, 113);
+        AboutDialog->resize(244, 127);
         verticalLayout_2 = new QVBoxLayout(AboutDialog);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         verticalLayout = new QVBoxLayout();
@@ -113,11 +113,7 @@ public:
         lbJapaneseTitle->setText(QApplication::translate("AboutDialog", "\346\227\245\346\234\254\350\252\236", 0, QApplication::UnicodeUTF8));
         lbVersion->setText(QApplication::translate("AboutDialog", "Version 1.0", 0, QApplication::UnicodeUTF8));
         lbAuthor->setText(QApplication::translate("AboutDialog", "Author: Simon Bertling", 0, QApplication::UnicodeUTF8));
-        lbEmail->setText(QApplication::translate("AboutDialog", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:8pt;\">Email: berti.x@gmx.de</span></p></body></html>", 0, QApplication::UnicodeUTF8));
+        lbEmail->setText(QApplication::translate("AboutDialog", "Email: berti.x@gmx.de", 0, QApplication::UnicodeUTF8));
         lbWeb->setText(QApplication::translate("AboutDialog", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
