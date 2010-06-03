@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--This file contains all vocables. It will be possible to store translations in different languages-->
+<japovoc content="vocables" version="1.0">
+	<vocable id="1" lesson="1"><!--creates new vocable. íd must be unic. lesson can be optional-->
+		<origin lang="japanese"><!--the word in the origal language-->
+			<kanji>曜</kanji><!--kanji should alwas be the first-->
+			<reading id="1" yomi="on1" primary="true">reading1</reading><!--Only one reading should be primary. ID is for matching meanings-->
+			<okurigana>oku1</okurigana><!--Okurigana must follow the corresponding reading-->
+			<reading id="2">reading2</reading><!--id matches the okurigana-->
+			<okurigana>oku2</okurigana>
+		</origin>
+		<translation lang="german"><!--One translation. lang indicates the language to which is to translate-->
+			<meaning id="1" primary="true">Hinweg</meaning><!--Can have multiple meanings but only one primary-->
+			<meaning id="2">gehen</meaning><!--id matches the corresponding reading-->
+		</translation>
+		<translation lang="english">
+			<meaning id="1" primary="true">half</meaning>
+			<meaning id="2" primary="true">halfhalf</meaning>
+		</translation>
+	</vocable>
+	<!--This is the common way for the trainer-->
+	<vocable id="2" lesson="1">
+		<origin lang="japanese">
+			<reading id="1" primary="true">つくえ</reading>
+		</origin>
+		<translation lang="german">
+			<meaning id="1" primary="true">Schreibtisch</meaning>
+		</translation>
+		<translation lang="english">
+			<meaning id="1" primary="true">desk</meaning>
+		</translation>
+	</vocable>
+</japovoc>
