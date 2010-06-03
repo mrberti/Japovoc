@@ -3,6 +3,8 @@ moc_*
 *.user
 Makefile*
 *.o
+# ini files
+*.ini
 # Linux binaries
 Japovoc
 # Windows folders and binaries
