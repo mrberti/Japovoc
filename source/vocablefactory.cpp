@@ -3,7 +3,7 @@
 VocableFactory::VocableFactory()
 {
 	fonts.fontKanji = 0;
-	fonts.fontMeaning = 0;
+	fonts.fontTranslation = 0;
 	fonts.fontPrimaryOrigin = 0;
 	fonts.fontPrimaryTranslation = 0;
 	fonts.fontReading = 0;

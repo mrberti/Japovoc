@@ -29,7 +29,7 @@ public:
 	typedef struct {
 		QFont *fontKanji;
 		QFont *fontReading;
-		QFont *fontMeaning;
+		QFont *fontTranslation;
 		QFont *fontPrimaryOrigin;
 		QFont *fontPrimaryTranslation;
 	} fonts_t;

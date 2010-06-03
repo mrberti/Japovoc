@@ -9,12 +9,13 @@ Japovoc::Japovoc(QWidget *parent) :
 
 	// connect all SIGNALS and SLOTS
 	connect(ui->actionAbout, SIGNAL(triggered()), this, SLOT(showAboutBox()));
+	connect(ui->actionPreferences, SIGNAL(triggered()), this, SLOT(showPreferences()));
+
 	connect(ui->btMagicButton, SIGNAL(clicked()), this, SLOT(doMagic()));
 
 	sceneRect.setRect(0,0,ui->graphicsView->width(),ui->graphicsView->height());  //(QRect(ui->graphicsView->geometry()));
 	scene.setSceneRect(sceneRect);
 	ui->graphicsView->setScene(&scene);
-
 }
 
 Japovoc::~Japovoc()
@@ -40,6 +41,12 @@ void Japovoc::showAboutBox()
 	aboutBox.exec();
 }
 
+void Japovoc::showPreferences()
+{
+	Preferences preferences(this);
+	preferences.exec();
+}
+
 void Japovoc::doMagic()
 {
 	qDebug("Trying some magic...");
@@ -57,8 +64,14 @@ void Japovoc::doMagic()
 	fonts.fontKanji = fontA;
 	fonts.fontReading = fontA;
 	fonts.fontPrimaryOrigin = fontA;
-	fonts.fontMeaning = fontB;
+	fonts.fontTranslation = fontB;
 	fonts.fontPrimaryTranslation = fontB;
+
+	SETTINGS_CREATE;
+	settings.beginGroup("Fonts");
+	settings.setValue("Kanji", *fonts.fontKanji);
+	settings.setValue("Reading", *fonts.fontReading);
+	settings.endGroup();
 
 	vocableFactory.setFonts(fonts);
 

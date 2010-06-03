@@ -5,6 +5,9 @@
 #include <QMessageBox>
 
 #include "aboutdialog.h"
+#include "preferences.h"
+
+#include "global.h"
 
 // include the VocableFactory
 #include "vocablefactory.h"
@@ -28,6 +31,9 @@ public:
 public slots:
 	/// Opens up the about box
 	void showAboutBox();
+
+	/// Opens up the preferences Dialog
+	void showPreferences();
 
 	/// Does magic, for debugging
 	void doMagic();

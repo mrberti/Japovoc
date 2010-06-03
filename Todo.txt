@@ -1,5 +1,8 @@
 # Just some thoughts for me
 
+* fonts
+	- insert okurigana fonts
+	
 * options
 	- options class
 	- options ui

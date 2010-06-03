@@ -3,8 +3,13 @@
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
-    Japovoc w;
-    w.show();
-    return a.exec();
+	QApplication a(argc, argv);
+	Japovoc w;
+
+	a.setApplicationName("Japovoc");
+	a.setOrganizationName("MrBerti");
+	a.setOrganizationDomain("http://github.com/mrberti");
+
+	w.show();
+	return a.exec();
 }

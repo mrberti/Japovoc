@@ -9,10 +9,14 @@ SOURCES += main.cpp \
     japovoc.cpp \
     aboutdialog.cpp \
     vocable.cpp \
-    vocablefactory.cpp
+    vocablefactory.cpp \
+    preferences.cpp
 HEADERS += japovoc.h \
     aboutdialog.h \
     vocable.h \
-    vocablefactory.h
+    vocablefactory.h \
+    global.h \
+    preferences.h
 FORMS += japovoc.ui \
-    aboutdialog.ui
+    aboutdialog.ui \
+    preferences.ui

@@ -1,6 +1,8 @@
 #ifndef VOCABLEFACTORY_H
 #define VOCABLEFACTORY_H
 
+#include "global.h"
+
 #include <QtGui>
 
 #include "vocable.h"
