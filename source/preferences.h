@@ -29,11 +29,17 @@ public slots:
 	void editPrimaryReadingFont();
 	void editPrimaryTranslationFont();
 
+	// language setting functions
+	void setLanguage();
 
 protected:
 	void changeEvent(QEvent *e);
 
 private:
+	void connectAll();
+	void initFonts();
+	void initLanguage();
+
 	Ui::Preferences *ui;
 
 	QFont fontKanji;
@@ -43,6 +49,8 @@ private:
 	QFont fontPrimaryTranslation;
 	QFont fontOkurigana;
 
+	QString	language;
+
 	// initial values
 	QFont fontInitialKanji;
 	QFont fontInitialReading;
@@ -50,6 +58,8 @@ private:
 	QFont fontInitialPrimaryReading;
 	QFont fontInitialPrimaryTranslation;
 	QFont fontInitialOkurigana;
+
+	QString	initialLanguage;
 };
 
 #endif // PREFERENCES_H

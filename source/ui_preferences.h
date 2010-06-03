@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'preferences.ui'
 **
-** Created: Thu 3. Jun 18:57:37 2010
+** Created: Thu 3. Jun 20:56:33 2010
 **      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -14,6 +14,7 @@
 #include <QtGui/QAction>
 #include <QtGui/QApplication>
 #include <QtGui/QButtonGroup>
+#include <QtGui/QComboBox>
 #include <QtGui/QDialog>
 #include <QtGui/QHBoxLayout>
 #include <QtGui/QHeaderView>
@@ -33,6 +34,11 @@ public:
     QTabWidget *tabWidget;
     QWidget *tab;
     QVBoxLayout *verticalLayout_4;
+    QHBoxLayout *horizontalLayout_9;
+    QLabel *label_7;
+    QSpacerItem *horizontalSpacer_8;
+    QComboBox *cbLanguage;
+    QSpacerItem *verticalSpacer;
     QWidget *tab_2;
     QHBoxLayout *horizontalLayout_8;
     QVBoxLayout *verticalLayout_2;
@@ -90,6 +96,29 @@ public:
         tab->setObjectName(QString::fromUtf8("tab"));
         verticalLayout_4 = new QVBoxLayout(tab);
         verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
+        horizontalLayout_9 = new QHBoxLayout();
+        horizontalLayout_9->setObjectName(QString::fromUtf8("horizontalLayout_9"));
+        label_7 = new QLabel(tab);
+        label_7->setObjectName(QString::fromUtf8("label_7"));
+
+        horizontalLayout_9->addWidget(label_7);
+
+        horizontalSpacer_8 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_9->addItem(horizontalSpacer_8);
+
+        cbLanguage = new QComboBox(tab);
+        cbLanguage->setObjectName(QString::fromUtf8("cbLanguage"));
+
+        horizontalLayout_9->addWidget(cbLanguage);
+
+
+        verticalLayout_4->addLayout(horizontalLayout_9);
+
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout_4->addItem(verticalSpacer);
+
         tabWidget->addTab(tab, QString());
         tab_2 = new QWidget();
         tab_2->setObjectName(QString::fromUtf8("tab_2"));
@@ -333,7 +362,7 @@ public:
 
         retranslateUi(Preferences);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(Preferences);
@@ -342,6 +371,7 @@ public:
     void retranslateUi(QDialog *Preferences)
     {
         Preferences->setWindowTitle(QApplication::translate("Preferences", "Japovoc Preferences", 0, QApplication::UnicodeUTF8));
+        label_7->setText(QApplication::translate("Preferences", "Language:", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("Preferences", "&General", 0, QApplication::UnicodeUTF8));
 #ifndef QT_NO_TOOLTIP
         label_3->setToolTip(QApplication::translate("Preferences", "The font the Kanji appears.", 0, QApplication::UnicodeUTF8));

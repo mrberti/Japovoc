@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'aboutdialog.ui'
 **
-** Created: Thu 3. Jun 19:39:03 2010
+** Created: Thu 3. Jun 19:59:43 2010
 **      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -108,7 +108,7 @@ public:
 
     void retranslateUi(QDialog *AboutDialog)
     {
-        AboutDialog->setWindowTitle(QApplication::translate("AboutDialog", "Dialog", 0, QApplication::UnicodeUTF8));
+        AboutDialog->setWindowTitle(QApplication::translate("AboutDialog", "Japovoc", 0, QApplication::UnicodeUTF8));
         lbTitle->setText(QApplication::translate("AboutDialog", "Japovoc", 0, QApplication::UnicodeUTF8));
         lbJapaneseTitle->setText(QApplication::translate("AboutDialog", "\346\227\245\346\234\254\350\252\236", 0, QApplication::UnicodeUTF8));
         lbVersion->setText(QApplication::translate("AboutDialog", "Version 1.0", 0, QApplication::UnicodeUTF8));

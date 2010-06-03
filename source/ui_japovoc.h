@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'japovoc.ui'
 **
-** Created: Thu 3. Jun 00:24:37 2010
+** Created: Thu 3. Jun 20:18:32 2010
 **      by: Qt User Interface Compiler version 4.6.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -26,7 +26,6 @@
 #include <QtGui/QPushButton>
 #include <QtGui/QSpacerItem>
 #include <QtGui/QStatusBar>
-#include <QtGui/QToolBar>
 #include <QtGui/QVBoxLayout>
 #include <QtGui/QWidget>
 
@@ -53,7 +52,6 @@ public:
     QMenu *menuFile;
     QMenu *menuEdit;
     QMenu *menu;
-    QToolBar *mainToolBar;
     QStatusBar *statusBar;
 
     void setupUi(QMainWindow *Japovoc)
@@ -144,9 +142,6 @@ public:
         menu = new QMenu(menuBar);
         menu->setObjectName(QString::fromUtf8("menu"));
         Japovoc->setMenuBar(menuBar);
-        mainToolBar = new QToolBar(Japovoc);
-        mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
-        Japovoc->addToolBar(Qt::TopToolBarArea, mainToolBar);
         statusBar = new QStatusBar(Japovoc);
         statusBar->setObjectName(QString::fromUtf8("statusBar"));
         Japovoc->setStatusBar(statusBar);

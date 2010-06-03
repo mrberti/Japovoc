@@ -1,5 +1,6 @@
-#include <QtGui/QApplication>
+#include "global.h"
 
+#include <QtGui/QApplication>
 #include <QTranslator>
 
 #include "japovoc.h"
@@ -9,9 +10,12 @@ int main(int argc, char *argv[])
 	QApplication a(argc, argv);
 	Japovoc w;
 
-	QTranslator translator;
+	SETTINGS_CREATE;
 
-	translator.load("japovoctr_de","Translations");
+	// set the language
+	QTranslator translator;
+	if(settings.value("Language").isValid())
+		translator.load(settings.value("Language").toString(), "Translations");
 	a.installTranslator(&translator);
 
 	a.setApplicationName("Japovoc");

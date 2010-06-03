@@ -5,23 +5,19 @@
     <name>AboutDialog</name>
     <message>
         <location filename="aboutdialog.ui" line="14"/>
-        <source>Dialog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="aboutdialog.ui" line="29"/>
         <source>Japovoc</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message utf8="true">
         <location filename="aboutdialog.ui" line="55"/>
         <source>日本語</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="aboutdialog.ui" line="77"/>
         <source>Version 1.0</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="aboutdialog.ui" line="84"/>
@@ -31,7 +27,7 @@
     <message>
         <location filename="aboutdialog.ui" line="91"/>
         <source>Email: berti.x@gmx.de</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="aboutdialog.ui" line="98"/>
@@ -40,7 +36,7 @@
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Web: &lt;/span&gt;&lt;a href=&quot;http://github.com/mrberti/Japovoc&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://github.com/mrberti/Japovoc&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -49,17 +45,17 @@ p, li { white-space: pre-wrap; }
         <location filename="japovoc.ui" line="14"/>
         <location filename="japovoc.ui" line="30"/>
         <source>Japovoc</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message utf8="true">
         <location filename="japovoc.ui" line="56"/>
         <source>ジャポヴォク</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message utf8="true">
         <location filename="japovoc.ui" line="81"/>
         <source>あいおうえお</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="japovoc.ui" line="88"/>
@@ -87,17 +83,17 @@ p, li { white-space: pre-wrap; }
         <translation></translation>
     </message>
     <message>
-        <location filename="japovoc.ui" line="158"/>
+        <location filename="japovoc.ui" line="150"/>
         <source>Quit</source>
         <translation>Beenden</translation>
     </message>
     <message>
-        <location filename="japovoc.ui" line="163"/>
+        <location filename="japovoc.ui" line="155"/>
         <source>Preferences...</source>
         <translation>Einstellungen...</translation>
     </message>
     <message>
-        <location filename="japovoc.ui" line="168"/>
+        <location filename="japovoc.ui" line="160"/>
         <source>About...</source>
         <translation>Über...</translation>
     </message>
@@ -112,140 +108,145 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="preferences.ui" line="14"/>
         <source>Japovoc Preferences</source>
-        <translation>Japovoc Einstellungen</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="preferences.ui" line="30"/>
         <source>&amp;General</source>
-        <translation>Allgemein</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="preferences.ui" line="36"/>
+        <location filename="preferences.ui" line="38"/>
+        <source>Language:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="preferences.ui" line="77"/>
         <source>&amp;Fonts</source>
-        <translation>Schriftarten</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="preferences.ui" line="48"/>
+        <location filename="preferences.ui" line="89"/>
         <source>The font the Kanji appears.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="preferences.ui" line="51"/>
+        <location filename="preferences.ui" line="92"/>
         <source>Kanji font:</source>
         <translation type="unfinished"></translation>
     </message>
     <message utf8="true">
-        <location filename="preferences.ui" line="80"/>
+        <location filename="preferences.ui" line="121"/>
         <source>日本語</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="preferences.ui" line="87"/>
-        <location filename="preferences.ui" line="139"/>
-        <location filename="preferences.ui" line="189"/>
-        <location filename="preferences.ui" line="239"/>
-        <location filename="preferences.ui" line="291"/>
-        <location filename="preferences.ui" line="341"/>
+        <location filename="preferences.ui" line="128"/>
+        <location filename="preferences.ui" line="180"/>
+        <location filename="preferences.ui" line="230"/>
+        <location filename="preferences.ui" line="280"/>
+        <location filename="preferences.ui" line="332"/>
+        <location filename="preferences.ui" line="382"/>
         <source>Edit...</source>
-        <translation>Bearbeiten...</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="preferences.ui" line="98"/>
+        <location filename="preferences.ui" line="139"/>
         <source>The font the primary reagin appears.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="preferences.ui" line="101"/>
+        <location filename="preferences.ui" line="142"/>
         <source>Primary reading font:</source>
         <translation type="unfinished"></translation>
     </message>
     <message utf8="true">
-        <location filename="preferences.ui" line="132"/>
+        <location filename="preferences.ui" line="173"/>
         <source>カタカナ</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="preferences.ui" line="150"/>
+        <location filename="preferences.ui" line="191"/>
         <source>The font the readings appear.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="preferences.ui" line="153"/>
+        <location filename="preferences.ui" line="194"/>
         <source>Reading font:</source>
         <translation type="unfinished"></translation>
     </message>
     <message utf8="true">
-        <location filename="preferences.ui" line="182"/>
+        <location filename="preferences.ui" line="223"/>
         <source>ひらがな</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="preferences.ui" line="200"/>
+        <location filename="preferences.ui" line="241"/>
         <source>The font the okurigana appear.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="preferences.ui" line="203"/>
+        <location filename="preferences.ui" line="244"/>
         <source>Okurigana font:</source>
         <translation type="unfinished"></translation>
     </message>
     <message utf8="true">
-        <location filename="preferences.ui" line="232"/>
+        <location filename="preferences.ui" line="273"/>
         <source>おくりがな</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="preferences.ui" line="250"/>
+        <location filename="preferences.ui" line="291"/>
         <source>The font the primary translation appears.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="preferences.ui" line="253"/>
+        <location filename="preferences.ui" line="294"/>
         <source>Primary translation font:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="preferences.ui" line="284"/>
+        <location filename="preferences.ui" line="325"/>
         <source>Primary translation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="preferences.ui" line="302"/>
+        <location filename="preferences.ui" line="343"/>
         <source>The font the Translation appears.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="preferences.ui" line="305"/>
+        <location filename="preferences.ui" line="346"/>
         <source>Translation font:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="preferences.ui" line="334"/>
+        <location filename="preferences.ui" line="375"/>
         <source>translation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="preferences.ui" line="386"/>
+        <location filename="preferences.ui" line="427"/>
         <source>&amp;Ok</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="preferences.ui" line="393"/>
+        <location filename="preferences.ui" line="434"/>
         <source>&amp;Apply</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="preferences.ui" line="400"/>
+        <location filename="preferences.ui" line="441"/>
         <source>&amp;Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="preferences.ui" line="407"/>
+        <location filename="preferences.ui" line="448"/>
         <source>Resets the preferences. Changes are applied when the buttons Ok or Apply are clicked.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="preferences.ui" line="410"/>
+        <location filename="preferences.ui" line="451"/>
         <source>&amp;Reset</source>
         <translation type="unfinished"></translation>
     </message>
@@ -253,32 +254,42 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>QObject</name>
     <message>
-        <location filename="preferences.cpp" line="130"/>
+        <location filename="preferences.cpp" line="41"/>
+        <source>English</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="preferences.cpp" line="42"/>
+        <source>German</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="preferences.cpp" line="95"/>
         <source>Select kanji font</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="preferences.cpp" line="137"/>
+        <location filename="preferences.cpp" line="102"/>
         <source>Select okurigana font</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="preferences.cpp" line="144"/>
+        <location filename="preferences.cpp" line="109"/>
         <source>Select primary reading font</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="preferences.cpp" line="151"/>
+        <location filename="preferences.cpp" line="116"/>
         <source>Select primary translation font</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="preferences.cpp" line="158"/>
+        <location filename="preferences.cpp" line="123"/>
         <source>Select reading fFont</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="preferences.cpp" line="165"/>
+        <location filename="preferences.cpp" line="130"/>
         <source>Select translation font</source>
         <translation type="unfinished"></translation>
     </message>

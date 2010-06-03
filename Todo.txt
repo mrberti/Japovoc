@@ -4,6 +4,4 @@
 	- insert okurigana fonts
 	
 * options
-	- options class
-	- options ui
-	- use QSettings
+	- find out installed translations automatically

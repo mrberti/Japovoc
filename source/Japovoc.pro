@@ -20,5 +20,5 @@ HEADERS += japovoc.h \
 FORMS += japovoc.ui \
 	aboutdialog.ui \
 	preferences.ui
-TRANSLATIONS = japovoctr_de.ts
+TRANSLATIONS = german.ts
 DESTDIR = ../bin/

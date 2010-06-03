@@ -7,66 +7,9 @@ Preferences::Preferences(QWidget *parent) :
 {
 	ui->setupUi(this);
 
-	// initial values
-	fontInitialKanji = ui->lbKanjiFontSample->font();
-	fontInitialReading = ui->lbReadingFontSample->font();
-	fontInitialTranslation = ui->lbTranslationFontSample->font();
-	fontInitialPrimaryReading = ui->lbPrimaryReadingFontSample->font();
-	fontInitialPrimaryTranslation = ui->lbPrimaryTranslationFontSample->font();
-	fontInitialOkurigana = ui->lbOkuriganaFontSample->font();
-
-	// read current settings
-	SETTINGS_CREATE;
-	if(!settings.value("Fonts/Kanji").isValid())
-		fontKanji = ui->lbKanjiFontSample->font();
-	else
-		fontKanji = settings.value("Fonts/Kanji").value<QFont>();
-
-	if(!settings.value("Fonts/Reading").isValid())
-		fontReading = ui->lbReadingFontSample->font();
-	else
-		fontReading = settings.value("Fonts/Reading").value<QFont>();
-
-	if(!settings.value("Fonts/PrimaryReading").isValid())
-		fontPrimaryReading = ui->lbPrimaryReadingFontSample->font();
-	else
-		fontPrimaryReading = settings.value("Fonts/PrimaryReading").value<QFont>();
-
-	if(!settings.value("Fonts/Okurigana").isValid())
-		fontOkurigana = ui->lbOkuriganaFontSample->font();
-	else
-		fontOkurigana = settings.value("Fonts/Okurigana").value<QFont>();
-
-	if(!settings.value("Fonts/Translation").isValid())
-		fontTranslation = ui->lbTranslationFontSample->font();
-	else
-		fontTranslation = settings.value("Fonts/Translation").value<QFont>();
-
-	if(!settings.value("Fonts/PrimaryTranslation").isValid())
-		fontPrimaryTranslation = ui->lbPrimaryTranslationFontSample->font();
-	else
-		fontPrimaryTranslation = settings.value("Fonts/PrimaryTranslation").value<QFont>();
-
-	// connect all buttons
-	connect(ui->btApply, SIGNAL(clicked()), this, SLOT(applyChanges()));
-	connect(ui->btCancel, SIGNAL(clicked()), this, SLOT(close()));
-	connect(ui->btOk, SIGNAL(clicked()), this, SLOT(ok()));
-	connect(ui->btResetPreferences, SIGNAL(clicked()), this, SLOT(setInitialValues()));
-
-	// font buttons
-	connect(ui->btEditKanjiFont, SIGNAL(clicked()), this, SLOT(editKanjiFont()));
-	connect(ui->btEditOkuriganaFont, SIGNAL(clicked()), this, SLOT(editOkuriganaFont()));
-	connect(ui->btEditReadingFont, SIGNAL(clicked()), this, SLOT(editReadingFont()));
-	connect(ui->btEditTranslationFont, SIGNAL(clicked()), this, SLOT(editTranslationFont()));
-	connect(ui->btEditPrimaryReadingFont, SIGNAL(clicked()), this, SLOT(editPrimaryReadingFont()));
-	connect(ui->btEditPrimaryTranslationFont, SIGNAL(clicked()), this, SLOT(editPrimaryTranslationFont()));
-
-	ui->lbKanjiFontSample->setFont(fontKanji);
-	ui->lbOkuriganaFontSample->setFont(fontOkurigana);
-	ui->lbReadingFontSample->setFont(fontReading);
-	ui->lbTranslationFontSample->setFont(fontTranslation);
-	ui->lbPrimaryReadingFontSample->setFont(fontPrimaryReading);
-	ui->lbPrimaryTranslationFontSample->setFont(fontPrimaryTranslation);
+	connectAll();
+	initFonts();
+	initLanguage();
 }
 
 Preferences::~Preferences()
@@ -86,9 +29,35 @@ void Preferences::changeEvent(QEvent *e)
 	}
 }
 
+void Preferences::initLanguage()
+{
+	SETTINGS_CREATE;
+	if(settings.value("Language").isValid())
+	{
+		initialLanguage = settings.value("Language").toString();
+	}
+	else
+		initialLanguage = QString("english");
+	ui->cbLanguage->addItem(QObject::tr("English"), QString("english"));
+	ui->cbLanguage->addItem(QObject::tr("German"), QString("german"));
+
+	ui->cbLanguage->setCurrentIndex(ui->cbLanguage->findData(QVariant(initialLanguage)));
+}
+
+void Preferences::setLanguage()
+{
+	language = ui->cbLanguage->itemData(ui->cbLanguage->currentIndex()).toString();
+	QTranslator translator;
+	translator.load(language, "Translations");
+	QApplication::installTranslator(&translator);
+}
+
 void Preferences::applyChanges()
 {
 	SETTINGS_CREATE;
+
+	// GENERAL
+	settings.setValue("Language", language);
 
 	// FONTS
 	settings.beginGroup("Fonts");
@@ -164,4 +133,74 @@ void Preferences::editTranslationFont()
 	bool ok = false;
 	fontTranslation = QFontDialog::getFont(&ok, fontTranslation, this, QObject::tr("Select translation font"));
 	ui->lbTranslationFontSample->setFont(fontTranslation);
+}
+
+void Preferences::connectAll()
+{
+	// connect all buttons
+	connect(ui->btApply, SIGNAL(clicked()), this, SLOT(applyChanges()));
+	connect(ui->btCancel, SIGNAL(clicked()), this, SLOT(close()));
+	connect(ui->btOk, SIGNAL(clicked()), this, SLOT(ok()));
+	connect(ui->btResetPreferences, SIGNAL(clicked()), this, SLOT(setInitialValues()));
+
+	// font buttons
+	connect(ui->btEditKanjiFont, SIGNAL(clicked()), this, SLOT(editKanjiFont()));
+	connect(ui->btEditOkuriganaFont, SIGNAL(clicked()), this, SLOT(editOkuriganaFont()));
+	connect(ui->btEditReadingFont, SIGNAL(clicked()), this, SLOT(editReadingFont()));
+	connect(ui->btEditTranslationFont, SIGNAL(clicked()), this, SLOT(editTranslationFont()));
+	connect(ui->btEditPrimaryReadingFont, SIGNAL(clicked()), this, SLOT(editPrimaryReadingFont()));
+	connect(ui->btEditPrimaryTranslationFont, SIGNAL(clicked()), this, SLOT(editPrimaryTranslationFont()));
+
+	// language
+	connect(ui->cbLanguage, SIGNAL(currentIndexChanged(QString)), this, SLOT(setLanguage()));
+}
+
+void Preferences::initFonts()
+{
+	// initial values
+	fontInitialKanji = ui->lbKanjiFontSample->font();
+	fontInitialReading = ui->lbReadingFontSample->font();
+	fontInitialTranslation = ui->lbTranslationFontSample->font();
+	fontInitialPrimaryReading = ui->lbPrimaryReadingFontSample->font();
+	fontInitialPrimaryTranslation = ui->lbPrimaryTranslationFontSample->font();
+	fontInitialOkurigana = ui->lbOkuriganaFontSample->font();
+
+	// read current settings
+	SETTINGS_CREATE;
+	if(!settings.value("Fonts/Kanji").isValid())
+		fontKanji = ui->lbKanjiFontSample->font();
+	else
+		fontKanji = settings.value("Fonts/Kanji").value<QFont>();
+
+	if(!settings.value("Fonts/Reading").isValid())
+		fontReading = ui->lbReadingFontSample->font();
+	else
+		fontReading = settings.value("Fonts/Reading").value<QFont>();
+
+	if(!settings.value("Fonts/PrimaryReading").isValid())
+		fontPrimaryReading = ui->lbPrimaryReadingFontSample->font();
+	else
+		fontPrimaryReading = settings.value("Fonts/PrimaryReading").value<QFont>();
+
+	if(!settings.value("Fonts/Okurigana").isValid())
+		fontOkurigana = ui->lbOkuriganaFontSample->font();
+	else
+		fontOkurigana = settings.value("Fonts/Okurigana").value<QFont>();
+
+	if(!settings.value("Fonts/Translation").isValid())
+		fontTranslation = ui->lbTranslationFontSample->font();
+	else
+		fontTranslation = settings.value("Fonts/Translation").value<QFont>();
+
+	if(!settings.value("Fonts/PrimaryTranslation").isValid())
+		fontPrimaryTranslation = ui->lbPrimaryTranslationFontSample->font();
+	else
+		fontPrimaryTranslation = settings.value("Fonts/PrimaryTranslation").value<QFont>();
+
+	ui->lbKanjiFontSample->setFont(fontKanji);
+	ui->lbOkuriganaFontSample->setFont(fontOkurigana);
+	ui->lbReadingFontSample->setFont(fontReading);
+	ui->lbTranslationFontSample->setFont(fontTranslation);
+	ui->lbPrimaryReadingFontSample->setFont(fontPrimaryReading);
+	ui->lbPrimaryTranslationFontSample->setFont(fontPrimaryTranslation);
 }
