@@ -119,7 +119,7 @@ QXmlStreamReader::Error VocableFactory::parseVocable(QXmlStreamReader *xml)
 						readings.insert(id2, reading);
 					}
 					else {
-						xml->raiseError(QString(QObject::tr("Read unexpected tag %1 in line %1").arg(name).arg(xml->lineNumber())));
+						xml->raiseError(QString(QObject::tr("Read unexpected tag %1 in line %2").arg(name).arg(xml->lineNumber())));
 					}
 
 					xml->readNextStartElement();
@@ -140,7 +140,7 @@ QXmlStreamReader::Error VocableFactory::parseVocable(QXmlStreamReader *xml)
 						meanings.insert(id2, meaning);
 					}
 					else {
-						xml->raiseError(QString(QObject::tr("Read unexpected tag %1 in line %1").arg(name).arg(xml->lineNumber())));
+						xml->raiseError(QString(QObject::tr("Read unexpected tag %1 in line %2").arg(name).arg(xml->lineNumber())));
 					}
 					translations.insert(meaning.language,meanings);
 
@@ -149,7 +149,7 @@ QXmlStreamReader::Error VocableFactory::parseVocable(QXmlStreamReader *xml)
 				}
 			}
 			else {
-				xml->raiseError(QString(QObject::tr("Read unexpected tag %1 in line %1").arg(name).arg(xml->lineNumber())));
+				xml->raiseError(QString(QObject::tr("Read unexpected tag %1 in line %2").arg(name).arg(xml->lineNumber())));
 			}
 		}
 		xml->readNextStartElement();

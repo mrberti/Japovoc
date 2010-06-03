@@ -98,7 +98,7 @@ p, li { white-space: pre-wrap; }
         <translation>Über...</translation>
     </message>
     <message>
-        <location filename="japovoc.cpp" line="80"/>
+        <location filename="japovoc.cpp" line="81"/>
         <source>Error</source>
         <translation>Fehler</translation>
     </message>
@@ -108,37 +108,37 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="preferences.ui" line="14"/>
         <source>Japovoc Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Japovoc Einstellungen</translation>
     </message>
     <message>
         <location filename="preferences.ui" line="30"/>
         <source>&amp;General</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Allgemein</translation>
     </message>
     <message>
         <location filename="preferences.ui" line="38"/>
         <source>Language:</source>
-        <translation type="unfinished"></translation>
+        <translation>Sprache:</translation>
     </message>
     <message>
         <location filename="preferences.ui" line="77"/>
         <source>&amp;Fonts</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Schriftarten</translation>
     </message>
     <message>
         <location filename="preferences.ui" line="89"/>
         <source>The font the Kanji appears.</source>
-        <translation type="unfinished"></translation>
+        <translation>Die Schriftart der Kanji.</translation>
     </message>
     <message>
         <location filename="preferences.ui" line="92"/>
         <source>Kanji font:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kanji Schriftart:</translation>
     </message>
     <message utf8="true">
         <location filename="preferences.ui" line="121"/>
         <source>日本語</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="preferences.ui" line="128"/>
@@ -148,177 +148,177 @@ p, li { white-space: pre-wrap; }
         <location filename="preferences.ui" line="332"/>
         <location filename="preferences.ui" line="382"/>
         <source>Edit...</source>
-        <translation type="unfinished"></translation>
+        <translation>Ändern...</translation>
     </message>
     <message>
         <location filename="preferences.ui" line="139"/>
         <source>The font the primary reagin appears.</source>
-        <translation type="unfinished"></translation>
+        <translation>Die Schriftart der primären Lesung.</translation>
     </message>
     <message>
         <location filename="preferences.ui" line="142"/>
         <source>Primary reading font:</source>
-        <translation type="unfinished"></translation>
+        <translation>Primäre Lesung Schriftart:</translation>
     </message>
     <message utf8="true">
         <location filename="preferences.ui" line="173"/>
         <source>カタカナ</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="preferences.ui" line="191"/>
         <source>The font the readings appear.</source>
-        <translation type="unfinished"></translation>
+        <translation>Die Schriftart der Lesungen.</translation>
     </message>
     <message>
         <location filename="preferences.ui" line="194"/>
         <source>Reading font:</source>
-        <translation type="unfinished"></translation>
+        <translation>Lesung Schriftart:</translation>
     </message>
     <message utf8="true">
         <location filename="preferences.ui" line="223"/>
         <source>ひらがな</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="preferences.ui" line="241"/>
         <source>The font the okurigana appear.</source>
-        <translation type="unfinished"></translation>
+        <translation>Die Schriftart der Okurigana.</translation>
     </message>
     <message>
         <location filename="preferences.ui" line="244"/>
         <source>Okurigana font:</source>
-        <translation type="unfinished"></translation>
+        <translation>Okurigana Schritart:</translation>
     </message>
     <message utf8="true">
         <location filename="preferences.ui" line="273"/>
         <source>おくりがな</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="preferences.ui" line="291"/>
         <source>The font the primary translation appears.</source>
-        <translation type="unfinished"></translation>
+        <translation>Die Schriftart der primären Übersetzung.</translation>
     </message>
     <message>
         <location filename="preferences.ui" line="294"/>
         <source>Primary translation font:</source>
-        <translation type="unfinished"></translation>
+        <translation>Primäre Übersetzung Schriftart:</translation>
     </message>
     <message>
         <location filename="preferences.ui" line="325"/>
         <source>Primary translation</source>
-        <translation type="unfinished"></translation>
+        <translation>Primäre Übersetzung</translation>
     </message>
     <message>
         <location filename="preferences.ui" line="343"/>
         <source>The font the Translation appears.</source>
-        <translation type="unfinished"></translation>
+        <translation>Die Schriftart der Übersetzungen.</translation>
     </message>
     <message>
         <location filename="preferences.ui" line="346"/>
         <source>Translation font:</source>
-        <translation type="unfinished"></translation>
+        <translation>Übersetzung Schritftart:</translation>
     </message>
     <message>
         <location filename="preferences.ui" line="375"/>
         <source>translation</source>
-        <translation type="unfinished"></translation>
+        <translation>Übersetzung</translation>
     </message>
     <message>
         <location filename="preferences.ui" line="427"/>
         <source>&amp;Ok</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ok</translation>
     </message>
     <message>
         <location filename="preferences.ui" line="434"/>
         <source>&amp;Apply</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Übernehmen</translation>
     </message>
     <message>
         <location filename="preferences.ui" line="441"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>A&amp;bbrechen</translation>
     </message>
     <message>
         <location filename="preferences.ui" line="448"/>
         <source>Resets the preferences. Changes are applied when the buttons Ok or Apply are clicked.</source>
-        <translation type="unfinished"></translation>
+        <translation>Setzt die Einstellungen zurück. Änderungen werden bei Klick auf Ok oder Übernehmen übernommen.</translation>
     </message>
     <message>
         <location filename="preferences.ui" line="451"/>
         <source>&amp;Reset</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zurücksetzen</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
-        <location filename="preferences.cpp" line="41"/>
-        <source>English</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="preferences.cpp" line="42"/>
+        <source>English</source>
+        <translation>Englisch</translation>
+    </message>
+    <message>
         <source>German</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">Deutsch</translation>
     </message>
     <message>
-        <location filename="preferences.cpp" line="95"/>
+        <location filename="preferences.cpp" line="110"/>
         <source>Select kanji font</source>
-        <translation type="unfinished"></translation>
+        <translation>Kanji Schriftart wählen</translation>
     </message>
     <message>
-        <location filename="preferences.cpp" line="102"/>
+        <location filename="preferences.cpp" line="117"/>
         <source>Select okurigana font</source>
-        <translation type="unfinished"></translation>
+        <translation>Okurigana Schriftart auswählen</translation>
     </message>
     <message>
-        <location filename="preferences.cpp" line="109"/>
+        <location filename="preferences.cpp" line="124"/>
         <source>Select primary reading font</source>
-        <translation type="unfinished"></translation>
+        <translation>Primäre Lesung Schriftart auswählen</translation>
     </message>
     <message>
-        <location filename="preferences.cpp" line="116"/>
+        <location filename="preferences.cpp" line="131"/>
         <source>Select primary translation font</source>
-        <translation type="unfinished"></translation>
+        <translation>Primärr Übesetzung Schriftart auswählen</translation>
     </message>
     <message>
-        <location filename="preferences.cpp" line="123"/>
+        <location filename="preferences.cpp" line="138"/>
         <source>Select reading fFont</source>
-        <translation type="unfinished"></translation>
+        <translation>Lesung Schriftart auswählen</translation>
     </message>
     <message>
-        <location filename="preferences.cpp" line="130"/>
+        <location filename="preferences.cpp" line="145"/>
         <source>Select translation font</source>
-        <translation type="unfinished"></translation>
+        <translation>Übersetzung Schriftart auswählen</translation>
     </message>
     <message>
         <location filename="vocablefactory.cpp" line="23"/>
         <source>Could not open file &apos;%1&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Konnte Datei &apos;%1&apos; nicht öffnen</translation>
     </message>
     <message>
         <location filename="vocablefactory.cpp" line="47"/>
         <source>readFromXML(): content is not &apos;vocables&apos; in line %1</source>
-        <translation type="unfinished"></translation>
+        <translation>readFromXML(): Inhalt ist nicht &apos;vocables&apos; in Zeile %1</translation>
     </message>
     <message>
         <location filename="vocablefactory.cpp" line="56"/>
         <source>readFromXML(): expected to read &lt;vocable&gt; or &lt;japovoc&gt; but read &lt;%1&gt; in line %1.</source>
-        <translation type="unfinished"></translation>
+        <translation>readFromXML(): Erwartete &lt;vocable&gt; or &lt;japovoc&gt;, aber &lt;%1&gt; gelesen in Zeile %1.</translation>
     </message>
     <message>
         <location filename="vocablefactory.cpp" line="87"/>
         <source>parseVocable(): Expected to read &lt;vocable&gt; in line %1.</source>
-        <translation type="unfinished"></translation>
+        <translation>parseVocable(): Erwartete &lt;vocable&gt; in Zeile %1.</translation>
     </message>
     <message>
         <location filename="vocablefactory.cpp" line="122"/>
         <location filename="vocablefactory.cpp" line="143"/>
         <location filename="vocablefactory.cpp" line="152"/>
-        <source>Read unexpected tag %1 in line %1</source>
-        <translation type="unfinished"></translation>
+        <source>Read unexpected tag %1 in line %2</source>
+        <oldsource>Read unexpected tag %1 in line %1</oldsource>
+        <translation>Unerwarteter tag %1 gelesen in Zeile %2</translation>
     </message>
 </context>
 </TS>
